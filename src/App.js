@@ -1,11 +1,18 @@
 import React from 'react';
-import './resources/css/App.scss';
+import './resources/css/app.scss';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import Home from './components/home/Home';
 
 function App() {
   return (
-    <div className="App">
-      haha
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
