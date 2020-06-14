@@ -1,0 +1,71 @@
+@import '../../../../resources/css/variables.scss';
+
+.Line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 42px;
+  stroke-dasharray: 1000px;
+
+  &Vertical{
+    
+    &Animation1{
+      animation: move 3s ease-out;
+      animation-fill-mode: backwards;
+    }
+
+    &Animation2{
+      animation: move 2s linear 1s;
+      animation-fill-mode: backwards;
+    }
+  }
+
+  &Horizontal{
+    &Animation1{
+      animation: move 3s linear 1s;
+      animation-fill-mode: backwards;
+    }
+
+    &Animation2{
+      animation: move 1s linear 0.75s;
+      animation-fill-mode: backwards;
+    }
+
+    &Animation3{
+      animation: move 1s linear 1s;
+      animation-fill-mode: backwards;
+    }
+  }
+
+  &Circle{
+    animation: move 1s linear 1s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.Dot{
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  fill: $color-primary;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke-width: 50;
+  animation: appear 3s ease-out;
+  animation-fill-mode: backwards;
+}
+  
+@keyframes move {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

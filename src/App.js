@@ -6,7 +6,7 @@ import Home from './components/home/Home';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         <Switch>
           <Route exact path='/' component={Home} />
           <Redirect from="*" to="/" />

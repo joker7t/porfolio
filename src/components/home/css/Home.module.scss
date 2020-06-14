@@ -1,3 +1,64 @@
-.Home{
-    background: green;
+@import '../../../resources/css/variables.scss';
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    &Hello{      
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        animation: move-all-to-left 0.75s linear 1.5s;
+        animation-fill-mode: both;  
+
+        &Container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            &Half{
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 500;
+                background-color: $color-primary;
+            }
+    
+            &Letter{
+                position: absolute;
+                z-index: 1000;
+    
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &Canvas{
+        width: 100%;
+        height: 100%;
+        background: #252A35;
+        position: absolute;
+    }
+}
+
+@keyframes move-all-to-left {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+      display: none;
+    }
 }
