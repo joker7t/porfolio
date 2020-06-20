@@ -7,11 +7,11 @@ const Home = () => {
     const homeCanvasRef = useRef(null);
 
     useEffect(() => {
-        const space = buildHomeCanvas('#HomeCanvas');
+        const space = buildHomeCanvas(homeCanvasRef, null);
 
         window.addEventListener('resize', function (event) {
-            space.removeAll();
-            buildHomeCanvas('#HomeCanvas');
+            homeCanvasRef.current.removeChild(homeCanvasRef.current.firstChild);
+            buildHomeCanvas(homeCanvasRef, space);
         });
 
         //eslint-disable-next-line
