@@ -1,5 +1,15 @@
 @import './variables.scss';
 
+// import Boostrap and custom it
+// change the theme
+$theme-colors: (
+  "primary": $color-primary,
+);
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+//end Bootstrap
+
 *{
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
