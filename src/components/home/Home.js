@@ -19,11 +19,22 @@ const Home = () => {
 
     return (
         <div className={classes.home}>
-            <div id="HomeCanvas" className={classes.homeCanvas} ref={homeCanvasRef}></div>
+            <div className={classes.homeMainContainer}>
+                <div id="HomeCanvas" className={classes.homeCanvas} ref={homeCanvasRef}></div>
+                <div className={classes.homeText}>
+                    Hello, I'm <span>Toan Nguyen</span><br/>
+                    I'm a full-stack developer.<br/>
+                    <span className={classes.homeTextInfo}>
+                        Know more about me <span>>></span>
+                    </span>
+                </div>
+            </div>
+            
 
             <div className={classes.homeHello}>
                 <div className={classes.homeHelloContainer}>
-                    <div className={classes.homeHelloContainerHalf}></div>
+                <div className={`${classes.homeHelloContainerHalf} ${classes.homeHelloContainerHalfLeft}`}></div>
+                <div className={`${classes.homeHelloContainerHalf} ${classes.homeHelloContainerHalfRight}`}></div>
                     <div className={classes.homeHelloContainerLetter}>
                         <Hello />
                     </div>
