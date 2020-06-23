@@ -1,6 +1,7 @@
+@import '../../../resources/css/variables.scss';
+
 .stickyWrapper {
     position: relative;
-    height: 3rem;
   }
   
   .sticky {
@@ -16,3 +17,8 @@
       z-index: 1;
     }
 }
+
+.header{
+    border-bottom: $color-primary 3px solid;
+    opacity: .3;
+  }

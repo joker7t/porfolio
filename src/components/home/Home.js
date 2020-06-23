@@ -22,19 +22,19 @@ const Home = () => {
             <div className={classes.homeMainContainer}>
                 <div id="HomeCanvas" className={classes.homeCanvas} ref={homeCanvasRef}></div>
                 <div className={classes.homeText}>
-                    Hello, I'm <span>Toan Nguyen</span><br/>
-                    I'm a full-stack developer.<br/>
+                    Hello, I'm <span className={classes.highlight}>Toan Nguyen</span><br />
+                    I'm a full-stack developer.<br />
                     <span className={classes.homeTextInfo}>
-                        Know more about me <span>>></span>
+                        Know more about me <i className={`fa fa-arrow-right ${classes.highlight}`} aria-hidden="true"></i>
                     </span>
                 </div>
             </div>
-            
+
 
             <div className={classes.homeHello}>
                 <div className={classes.homeHelloContainer}>
-                <div className={`${classes.homeHelloContainerHalf} ${classes.homeHelloContainerHalfLeft}`}></div>
-                <div className={`${classes.homeHelloContainerHalf} ${classes.homeHelloContainerHalfRight}`}></div>
+                    <div className={`${classes.homeHelloContainerHalf} ${classes.homeHelloContainerHalfLeft}`}></div>
+                    <div className={`${classes.homeHelloContainerHalf} ${classes.homeHelloContainerHalfRight}`}></div>
                     <div className={classes.homeHelloContainerLetter}>
                         <Hello />
                     </div>

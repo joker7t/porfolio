@@ -1,9 +1,15 @@
 @import '../../../resources/css/variables.scss';
+@import '../../../resources/css/mixins/transition';
+@import '../../../resources/css/mixins/respond';
 
 .home{
     position: relative;
     width: 100%;
     height: 100vh;
+
+    .highlight{
+        color: $color-tertiary;
+    }
 
     &Hello{      
         width: 100%;
@@ -47,11 +53,7 @@
     
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                -o-transform: translate(-50%, -50%);
+                @include translateXY(-50%, -50%);
             }
         }
     }
@@ -71,44 +73,50 @@
         .homeText{
             color: white;
             position: absolute;
-            border: 5px solid $color-primary;
-            font-size: 50px;
-            padding: 30px 50px;
+            font-size: 5rem;
+            padding: 3rem 5rem;
             text-align: center;
+            font-family: 'Righteous', cursive;
+            width: 85%;
 
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
+            @include translateXY(-50%, -50%);
+
+            span{
+                font-family: inherit;
+                font-size: inherit;
+            }
 
             &Info{
-                font-size: 30px;
-            }
-
-            &::after{
-                border: 5px solid $color-primary;
-                width: 110%;
-                height: 130%;
-
-                content: '';
-                background-color: transparent;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-
-                transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                -moz-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                -o-transform: translate(-50%, -50%);
+                font-family: 'Raleway', sans-serif !important;
+                font-size: 3rem !important;
+                padding: 1rem;
+                border: 1px solid $color-tertiary;
+                cursor: pointer;
             }
         }
-    }
 
+        @include respond(tab-port){
+            .homeText{
+                font-size: 3rem;
     
+                &Info{
+                    font-size: 2rem !important;
+                }
+            }
+        }
+
+        @include respond(phone){
+            .homeText{
+                font-size: 2rem;
+    
+                &Info{
+                    font-size: 1.5rem !important;
+                }
+            }
+        }
+    } 
 }
 
 @keyframes move-all-to-left {
@@ -120,5 +128,12 @@
       transform: translateX(-100%);
       opacity: 0;
       display: none;
+    }
+}
+
+@keyframes infoArrow {
+    100% {
+        color: $color-secondary;
+        @include rotateXY(90deg);
     }
 }

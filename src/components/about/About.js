@@ -6,9 +6,7 @@ const About = () => {
 
     return (
         <div style={{ minHeight: '200vh' }}>
-            <p>Lorem ipsum...</p>
             <Header />
-            <p>Lorem ipsum...</p>
         </div>
     );
 
