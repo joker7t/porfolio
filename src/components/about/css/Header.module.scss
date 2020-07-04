@@ -18,7 +18,13 @@
     }
 }
 
-.header{
-    border-bottom: $color-primary 3px solid;
-    opacity: .3;
+.Header{
+    border-bottom: $color-tertiary 3px solid;
+    font-size: 1.5rem !important;
+    font-family: 'Righteous', cursive;
+    background-color: $color-secondary;
+    
+    &Button{
+      color: $color-tertiary !important;
+    };
   }

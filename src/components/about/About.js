@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './css/About.module.scss';
+import style from './css/About.module.scss';
 import Header from './Header';
 
 const About = () => {
