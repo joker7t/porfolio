@@ -149,10 +149,3 @@
       display: none;
     }
 }
-
-@keyframes infoArrow {
-    100% {
-        color: $color-secondary;
-        @include rotateXY(90deg);
-    }
-}
