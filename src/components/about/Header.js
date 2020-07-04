@@ -31,7 +31,7 @@ const Header = () => {
     return (
         <div className={`${style.stickyWrapper} ${isSticky ? style.sticky : ''}`} ref={ref}>
             <div className={style.stickyInner}>
-                <Navbar expand="md" className={style.Header}>
+                <Navbar expand="md" className={style.Header} style={{ padding: '0 1rem' }}>
                     <Navbar.Brand onClick={() => scrollToElement('home')}>
                         Logo here
                     </Navbar.Brand>
@@ -40,35 +40,35 @@ const Header = () => {
                         <Nav className="ml-auto">
                             <NavDropdown.Divider />
                             <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('about')}>
-                                <span>A</span>
-                                <span>b</span>
-                                <span>o</span>
-                                <span>u</span>
-                                <span>t</span>
+                                <div className={style.HeaderButtonLetter}>A</div>
+                                <div className={style.HeaderButtonLetter}>b</div>
+                                <div className={style.HeaderButtonLetter}>o</div>
+                                <div className={style.HeaderButtonLetter}>u</div>
+                                <div className={style.HeaderButtonLetter}>t</div>
                             </Nav.Link>
                             <Nav.Link className={style.HeaderButton}>
-                                <span>S</span>
-                                <span>k</span>
-                                <span>i</span>
-                                <span>l</span>
-                                <span>l</span>
-                                <span>s</span>
+                                <div className={style.HeaderButtonLetter}>S</div>
+                                <div className={style.HeaderButtonLetter}>k</div>
+                                <div className={style.HeaderButtonLetter}>i</div>
+                                <div className={style.HeaderButtonLetter}>l</div>
+                                <div className={style.HeaderButtonLetter}>l</div>
+                                <div className={style.HeaderButtonLetter}>s</div>
                             </Nav.Link>
                             <Nav.Link className={style.HeaderButton}>
-                                <span>W</span>
-                                <span>o</span>
-                                <span>r</span>
-                                <span>k</span>
-                                <span>s</span>
+                                <div className={style.HeaderButtonLetter}>W</div>
+                                <div className={style.HeaderButtonLetter}>o</div>
+                                <div className={style.HeaderButtonLetter}>r</div>
+                                <div className={style.HeaderButtonLetter}>k</div>
+                                <div className={style.HeaderButtonLetter}>s</div>
                             </Nav.Link>
                             <Nav.Link className={style.HeaderButton}>
-                                <span>C</span>
-                                <span>o</span>
-                                <span>n</span>
-                                <span>t</span>
-                                <span>a</span>
-                                <span>c</span>
-                                <span>t</span>
+                                <div className={style.HeaderButtonLetter}>C</div>
+                                <div className={style.HeaderButtonLetter}>o</div>
+                                <div className={style.HeaderButtonLetter}>n</div>
+                                <div className={style.HeaderButtonLetter}>t</div>
+                                <div className={style.HeaderButtonLetter}>a</div>
+                                <div className={style.HeaderButtonLetter}>c</div>
+                                <div className={style.HeaderButtonLetter}>t</div>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

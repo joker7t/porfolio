@@ -1,4 +1,5 @@
 @import '../../../resources/css/variables.scss';
+@import '../../../resources/css/mixins/transition';
 
 .stickyWrapper {
     position: relative;
@@ -26,5 +27,28 @@
     
     &Button{
       color: $color-tertiary !important;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      @include transition(all 0.2s);
+
+      div{
+        float: left;
+      }
+
+      &:hover,
+      &:visited{
+        background-color: $color-tertiary;
+        color: $color-secondary !important;
+
+        .HeaderButtonLetter:nth-child(odd){
+          transform: translateY(-0.04rem) !important;
+        }
+          
+        .HeaderButtonLetter:nth-child(even) {
+          transform: translateY(0.04rem) !important;
+        }
+        
+      }
     };
+
   }
