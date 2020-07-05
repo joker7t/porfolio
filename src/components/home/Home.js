@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import classes from './css/Home.module.scss';
 import Hello from './svg/Hello.js';
-import { buildHomeCanvas } from './HomeCanvas';
 import { scroller } from "react-scroll";
+import Background from './Background';
 
 const scrollToElement = (element) => {
     scroller.scrollTo(element, {
@@ -13,25 +13,7 @@ const scrollToElement = (element) => {
 };
 
 const Home = () => {
-    const homeCanvasRef = useRef(null);
-    const [cachedView, setCachedView] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
-
     useEffect(() => {
-        const space = buildHomeCanvas(homeCanvasRef, null);
-
-        window.addEventListener('resize', function (event) {
-            if (cachedView.width !== window.innerWidth || cachedView.height !== window.innerHeight) {
-                setCachedView({
-                    width: window.innerWidth,
-                    height: window.innerHeight
-                });
-                homeCanvasRef.current.removeChild(homeCanvasRef.current.firstChild);
-                buildHomeCanvas(homeCanvasRef, space);
-            }
-        });
 
         //eslint-disable-next-line
     }, []);
@@ -39,7 +21,8 @@ const Home = () => {
     return (
         <div className={classes.home}>
             <div className={classes.homeMainContainer}>
-                <div id="HomeCanvas" className={classes.homeCanvas} ref={homeCanvasRef}></div>
+                <Background />
+
                 <div className={classes.homeText}>
                     Hello, I'm <span className={classes.highlight}>Toan Nguyen</span><br />
                     I'm a full-stack developer.

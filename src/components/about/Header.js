@@ -32,7 +32,7 @@ const Header = () => {
         <div className={`${style.stickyWrapper} ${isSticky ? style.sticky : ''}`} ref={ref}>
             <div className={style.stickyInner}>
                 <Navbar expand="md" className={style.Header} style={{ padding: '0 1rem' }}>
-                    <Navbar.Brand onClick={() => scrollToElement('home')}>
+                    <Navbar.Brand onClick={() => scrollToElement('home')} style={{ cursor: 'pointer' }}>
                         Logo here
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
