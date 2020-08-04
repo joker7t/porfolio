@@ -2,10 +2,10 @@
 @import '../../../resources/css/mixins/transition';
 
 .Header{
-    border-bottom: $color-primary 3px solid;
+    border-bottom: $color-secondary 3px solid;
     font-size: 1.8rem !important;
     font-family: 'Raleway', sans-serif !important;
-    background-color: $color-secondary;
+    background-color: $color-primary;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -20,6 +20,10 @@
       visibility: visible;
       opacity: 1;
     }
+
+    &Logo{
+      height: 60px;
+    }
     
     &Button{
       color: white !important;
@@ -32,11 +36,9 @@
 
       &:hover,
       &:visited{
-        .HeaderButtonLetter:nth-child(1){
-          color: $color-primary !important;
-        }
-        
+          color: $color-secondary !important;
       }
+
     };
 
   }

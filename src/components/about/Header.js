@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import style from './css/Header.module.scss';
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { scroller } from "react-scroll";
+import Logo from '../../resources/images/favicon.png';
 
 const Header = () => {
     const [headerShow, setHeaderShow] = useState(false);
 
-    const handleScroll = () => window.scrollY > window.innerHeight ? setHeaderShow(true) : setHeaderShow(false);
+    const handleScroll = () => window.scrollY >= window.innerHeight ? setHeaderShow(true) : setHeaderShow(false);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -28,8 +29,8 @@ const Header = () => {
         <div className={`${style.Header} ${headerShow ? style.HeaderShow : style.HeaderHidden}`}>
             <Navbar expand="md" style={{ padding: '0 1rem' }}>
                 <Navbar.Brand onClick={() => scrollToElement('home')} style={{ cursor: 'pointer' }}>
-                    Logo here
-                    </Navbar.Brand>
+                    <img className={style.HeaderLogo} src={Logo} alt='Toan Nguyen' />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
