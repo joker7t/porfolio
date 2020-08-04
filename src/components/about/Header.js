@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import style from './css/Header.module.scss';
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { scroller } from "react-scroll";
-import Logo from '../../resources/images/favicon.png';
 
 const Header = () => {
     const [headerShow, setHeaderShow] = useState(false);
@@ -28,13 +27,11 @@ const Header = () => {
     return (
         <div className={`${style.Header} ${headerShow ? style.HeaderShow : style.HeaderHidden}`}>
             <Navbar expand="md" style={{ padding: '0 1rem' }}>
-                <Navbar.Brand onClick={() => scrollToElement('home')} style={{ cursor: 'pointer' }}>
-                    <img className={style.HeaderLogo} src={Logo} alt='Toan Nguyen' />
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className='ml-auto' style={{ border: 'none' }} />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <NavDropdown.Divider />
+                    <NavDropdown.Divider />
+                    <Nav className='ml-5'>
                         <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('about')}>
                             <div className={style.HeaderButtonLetter}>A</div>
                             <div className={style.HeaderButtonLetter}>b</div>

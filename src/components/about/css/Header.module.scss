@@ -20,14 +20,11 @@
       visibility: visible;
       opacity: 1;
     }
-
-    &Logo{
-      height: 60px;
-    }
     
     &Button{
       color: white !important;
       padding-bottom: 0.5rem;
+      margin-right: 1rem;
       @include transition(all 0.5s);
 
       div{
