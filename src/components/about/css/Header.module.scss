@@ -1,33 +1,28 @@
 @import '../../../resources/css/variables.scss';
 @import '../../../resources/css/mixins/transition';
 
-.stickyWrapper {
-    position: relative;
-  }
-  
-  .sticky {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  
-    .stickyInner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-    }
-}
-
 .Header{
-    border-bottom: $color-tertiary 3px solid;
+    border-bottom: $color-primary 3px solid;
     font-size: 1.8rem !important;
-    font-family: 'Righteous', cursive;
+    font-family: 'Raleway', sans-serif !important;
     background-color: $color-secondary;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    transition: 1s all;
+
+    &Hidden{
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &Show{
+      visibility: visible;
+      opacity: 1;
+    }
     
     &Button{
-      color: $color-primary !important;
-      padding-top: 0.5rem;
+      color: white !important;
       padding-bottom: 0.5rem;
       @include transition(all 0.5s);
 
@@ -37,15 +32,8 @@
 
       &:hover,
       &:visited{
-        // background-color: $color-tertiary;
-        color: $color-tertiary !important;
-
-        .HeaderButtonLetter:nth-child(odd){
-          transform: translateY(-0.05rem) !important;
-        }
-          
-        .HeaderButtonLetter:nth-child(even) {
-          transform: translateY(0.05rem) !important;
+        .HeaderButtonLetter:nth-child(1){
+          color: $color-primary !important;
         }
         
       }
