@@ -2,6 +2,9 @@ import React from 'react';
 import Home from './home/Home';
 import About from './about/About';
 import { Element } from 'react-scroll';
+import Contact from './contact/Contact';
+import Skills from './Skills/Skills';
+import Works from './works/Works';
 
 const Landing = () => {
     return (
@@ -11,6 +14,15 @@ const Landing = () => {
             </Element>
             <Element name='about'>
                 <About />
+            </Element>
+            <Element name='skills'>
+                <Skills />
+            </Element>
+            <Element name='works'>
+                <Works />
+            </Element>
+            <Element name='contact'>
+                <Contact />
             </Element>
 
         </div>

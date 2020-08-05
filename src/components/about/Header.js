@@ -39,7 +39,7 @@ const Header = () => {
                             <div className={style.HeaderButtonLetter}>u</div>
                             <div className={style.HeaderButtonLetter}>t</div>
                         </Nav.Link>
-                        <Nav.Link className={style.HeaderButton}>
+                        <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('skills')}>
                             <div className={style.HeaderButtonLetter}>S</div>
                             <div className={style.HeaderButtonLetter}>k</div>
                             <div className={style.HeaderButtonLetter}>i</div>
@@ -47,14 +47,14 @@ const Header = () => {
                             <div className={style.HeaderButtonLetter}>l</div>
                             <div className={style.HeaderButtonLetter}>s</div>
                         </Nav.Link>
-                        <Nav.Link className={style.HeaderButton}>
+                        <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('works')}>
                             <div className={style.HeaderButtonLetter}>W</div>
                             <div className={style.HeaderButtonLetter}>o</div>
                             <div className={style.HeaderButtonLetter}>r</div>
                             <div className={style.HeaderButtonLetter}>k</div>
                             <div className={style.HeaderButtonLetter}>s</div>
                         </Nav.Link>
-                        <Nav.Link className={style.HeaderButton}>
+                        <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('contact')}>
                             <div className={style.HeaderButtonLetter}>C</div>
                             <div className={style.HeaderButtonLetter}>o</div>
                             <div className={style.HeaderButtonLetter}>n</div>
