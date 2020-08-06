@@ -3,6 +3,7 @@ import style from './css/About.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
 import Avatar from '../../resources/images/avatar.JPG';
 import Heading from "../util/Heading";
+import AboutContent from './AboutContent';
 
 const About = () => {
 
@@ -15,7 +16,9 @@ const About = () => {
                 <Col md={4} className='p-3'>
                     <img className={style.AboutAvatar} src={Avatar} alt='Toan Nguyen' />
                 </Col>
-                <Col md={8}>1233</Col>
+                <Col md={8}>
+                    <AboutContent />
+                </Col>
             </Row>
         </Container>
     );
