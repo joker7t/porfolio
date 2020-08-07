@@ -1,0 +1,26 @@
+@import '../../../resources/css/variables.scss';
+
+.AboutContent{
+    // font-size: 1.25rem;
+    font-family: 'Roboto Mono', monospace sans-serif;
+
+    &Text{
+        display: inline-block;
+
+        &Line{
+            opacity: 0;
+            height: 100%;
+            width: 3px;
+            color: $color-tertiary;
+            background-color: $color-tertiary;
+            padding: 0;
+        }
+
+        &Letters{
+            display: inline-block;
+        }
+    }
+
+
+}
+

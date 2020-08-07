@@ -27,7 +27,6 @@ const Heading = ({ text }) => {
             );
 
         lettersRef.current.forEach((letterRef, i) => {
-            console.log(i)
             TweenLite.fromTo(
                 letterRef,
                 0.6,
