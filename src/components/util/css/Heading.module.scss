@@ -8,6 +8,7 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.5rem;
 
     @include respond('phone'){
       font-size: 2rem;

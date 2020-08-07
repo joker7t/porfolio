@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Avatar from '../../resources/images/avatar.JPG';
 import Heading from "../util/Heading";
 import AboutContent from './AboutContent';
+import IdeaContainer from './ideas/IdeaContainer';
 
 const About = () => {
 
@@ -20,6 +21,7 @@ const About = () => {
                     <AboutContent />
                 </Col>
             </Row>
+            <IdeaContainer />
         </Container>
     );
 
