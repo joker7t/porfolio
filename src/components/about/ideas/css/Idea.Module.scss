@@ -1,0 +1,21 @@
+@import '../../../util/css/variables.scss';
+@import '../../../util/css/mixins/respond';
+
+.Idea{
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color: $color-tertiary;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+    @include respond('tab-land'){
+        width: 150px;
+        height: 150px;
+    }
+
+    @include respond('phone'){
+        width: 100px;
+        height: 100px;
+    }
+}

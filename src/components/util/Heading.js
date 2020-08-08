@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import style from './css/Heading.module.scss';
-import { TimelineLite, TweenLite, Power2 } from "gsap";
+import { TimelineMax, TweenMax, Power2 } from "gsap";
 import Reveal from 'react-reveal/Reveal';
 
 const Heading = ({ text }) => {
@@ -9,7 +9,7 @@ const Heading = ({ text }) => {
     const headingLineBottomRef = useRef(null);
 
     const showHeading = () => {
-        const timeline = new TimelineLite();
+        const timeline = new TimelineMax();
         timeline
             .fromTo(
                 headingLineTopRef.current,
@@ -27,7 +27,7 @@ const Heading = ({ text }) => {
             );
 
         lettersRef.current.forEach((letterRef, i) => {
-            TweenLite.fromTo(
+            TweenMax.fromTo(
                 letterRef,
                 0.6,
                 { scaleX: 0.3, opacity: 0 },

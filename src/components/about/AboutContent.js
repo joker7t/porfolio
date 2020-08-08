@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import style from './css/AboutContent.module.scss';
-import { TimelineLite, TweenLite, Power2, Linear } from "gsap";
+import { TimelineMax, TweenMax, Power2, Linear } from "gsap";
 import Reveal from 'react-reveal/Reveal';
 
 const AboutContent = () => {
@@ -12,7 +12,7 @@ const AboutContent = () => {
 
     const showContent = () => {
 
-        const timeline = new TimelineLite();
+        const timeline = new TimelineMax();
         timeline
             .fromTo(
                 aboutContentLineRef.current,
@@ -22,7 +22,7 @@ const AboutContent = () => {
             );
 
         lettersRef.current.forEach((letterRef, i) => {
-            TweenLite.fromTo(
+            TweenMax.fromTo(
                 letterRef,
                 0.6,
                 { scaleX: 0.3, opacity: 0 },

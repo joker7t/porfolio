@@ -1,10 +1,15 @@
 import React from 'react';
-import style from './css/Idea.Module.scss';
+import style from './css/Idea.module.scss';
+import { Image } from 'react-bootstrap';
 
-const Idea = () => {
+
+// <Image className={style.IdeaImage} src={imgSrc} alt='a' rounded />
+
+const Idea = ({ children }) => {
     return (
         <div>
-            idea
+            <div className={style.Idea}>{children}</div>
+            <span>Sample text</span>
         </div>
     );
 }

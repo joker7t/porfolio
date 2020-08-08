@@ -14,7 +14,7 @@ const About = () => {
                 <Heading text='about' />
             </Row>
             <Row>
-                <Col md={4} className='p-3'>
+                <Col md={4} className='p-5'>
                     <img className={style.AboutAvatar} src={Avatar} alt='Toan Nguyen' />
                 </Col>
                 <Col md={8}>

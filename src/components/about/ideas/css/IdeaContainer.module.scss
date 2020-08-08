@@ -1,0 +1,5 @@
+@import '../../../util/css/mixins/transition';
+
+.IdeaImage{
+    @include absCenter();
+}
