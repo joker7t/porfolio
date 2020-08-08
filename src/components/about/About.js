@@ -9,20 +9,22 @@ import IdeaContainer from './ideas/IdeaContainer';
 const About = () => {
 
     return (
-        <Container className={style.About}>
-            <Row>
-                <Heading text='about' />
-            </Row>
-            <Row>
-                <Col md={4} className='p-5'>
-                    <img className={style.AboutAvatar} src={Avatar} alt='Toan Nguyen' />
-                </Col>
-                <Col md={8}>
-                    <AboutContent />
-                </Col>
-            </Row>
-            <IdeaContainer />
-        </Container>
+        <div className={style.AboutBackground}>
+            <Container className={style.About}>
+                <Row>
+                    <Heading text='about' />
+                </Row>
+                <Row>
+                    <Col md={4} className='p-5'>
+                        <img className={style.AboutAvatar} src={Avatar} alt='Toan Nguyen' />
+                    </Col>
+                    <Col md={8}>
+                        <AboutContent />
+                    </Col>
+                </Row>
+                <IdeaContainer />
+            </Container>
+        </div>
     );
 
 }

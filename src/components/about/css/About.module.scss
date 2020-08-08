@@ -1,3 +1,12 @@
+.AboutBackground{
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(white, 0.8),
+        rgba(white, 0.8)),
+        url('../../../resources/images/background.JPG');
+    background-size: cover;
+}
+
 .About{
     padding-top: 5rem;
     padding-bottom: 2rem;
