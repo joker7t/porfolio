@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import style from './css/Idea.module.scss';
-import { Image } from 'react-bootstrap';
+import Reveal from 'react-reveal/Reveal';
+import { TweenMax, Linear } from 'gsap';
 
+const Idea = ({ children, ideaContent }) => {
+    const imageRef = useRef(null);
+    const contentRef = useRef(null);
 
-// <Image className={style.IdeaImage} src={imgSrc} alt='a' rounded />
+    const show = () => {
+        TweenMax.from(
+            imageRef.current,
+            1.5,
+            { transform: 'rotateY(90deg)', ease: Linear.easeNone }
+        )
+        TweenMax.from(
+            contentRef.current,
+            1,
+            { opacity: 0, ease: Linear.easeNone, delay: 1.5 }
+        )
+    }
 
-const Idea = ({ children }) => {
     return (
         <div>
-            <div className={style.Idea}>{children}</div>
-            <span>Sample text</span>
+            <Reveal onReveal={() => show()}>
+                <div style={{ textAlign: 'center' }}>
+                    <div className={style.Idea} ref={imageRef}>
+                        {children}
+                    </div>
+                    <span ref={contentRef} className={style.Content}>{ideaContent}</span>
+                </div>
+            </Reveal>
         </div>
     );
 }

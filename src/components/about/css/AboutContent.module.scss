@@ -1,7 +1,7 @@
-@import '../../../resources/css/variables.scss';
+@import '../../util/css/variables.scss';
 
 .AboutContent{
-    // font-size: 1.25rem;
+    padding-top: 2rem;
     font-family: 'Roboto Mono', monospace sans-serif;
 
     &Text{

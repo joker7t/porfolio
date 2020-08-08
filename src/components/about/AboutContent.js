@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import style from './css/AboutContent.module.scss';
 import { TimelineMax, TweenMax, Power2, Linear } from "gsap";
 import Reveal from 'react-reveal/Reveal';

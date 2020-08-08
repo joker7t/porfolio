@@ -9,7 +9,7 @@ import IdeaContainer from './ideas/IdeaContainer';
 const About = () => {
 
     return (
-        <Container className={style.About} style={{ minHeight: '200vh' }}>
+        <Container className={style.About}>
             <Row>
                 <Heading text='about' />
             </Row>

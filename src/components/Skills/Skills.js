@@ -1,10 +1,11 @@
 import React from 'react';
 import Heading from '../util/Heading';
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import style from './css/Skills.module.scss';
 
 const Skills = () => {
     return (
-        <Container>
+        <Container className={style.Skills}>
             <Row>
                 <Heading text='Skills' />
             </Row>
