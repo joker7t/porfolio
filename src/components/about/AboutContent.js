@@ -1,54 +1,18 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import style from './css/AboutContent.module.scss';
-import { TimelineMax, TweenMax, Power2, Linear } from "gsap";
-import Reveal from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
 
 const AboutContent = () => {
-    const lettersRef = useRef([]);
-    const aboutContentLineRef = useRef(null);
-    const textRef = useRef(null);
-    //eslint-disable-next-line
-    const [content, setContent] = useState('Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello');
-
-    const showContent = () => {
-
-        const timeline = new TimelineMax();
-        timeline
-            .fromTo(
-                aboutContentLineRef.current,
-                1,
-                { scaleY: 0, opacity: 0 },
-                { scaleY: 1, opacity: 1, ease: Linear.easeNone, repeat: -1, delay: 0.01 * content.length }
-            );
-
-        lettersRef.current.forEach((letterRef, i) => {
-            TweenMax.fromTo(
-                letterRef,
-                0.6,
-                { scaleX: 0.3, opacity: 0 },
-                { scaleX: 1, opacity: 1, ease: Power2.easeOut, delay: 0.01 * i },
-            )
-        })
-    }
-
-    const showText = () =>
-        [...content].map((character, i) => <span key={i} ref={el => lettersRef.current[i] = el}>{character}</span>)
-
 
     return (
         <div>
-            <Reveal onReveal={() => showContent()}>
-                <div className={style.AboutContent}>
-                    <span className={style.AboutContentText}>
-
-                        <span className={style.AboutContentTextLetters} ref={textRef}>
-                            {showText()}{' '}
-                            <span className={style.AboutContentTextLine} ref={aboutContentLineRef}>|</span>
-                        </span>
-
-                    </span>
+            <Fade right>
+                <div className={style.AboutContent} >
+                    I’m a Web developer in Axon Active Vietnam <br />
+                    I have over 3 years of developing web applications. I am working as a Full-stack developer for projects about fintech and e-commerce. My experience includes MySql, Postgres, MongoDB, Java, JSF, Spring, Javascript, React, Nginx. I also have experience in testing.<br />
+                    Besides that, I am familiar with Kanban & Scrum process. More important, I’m confident, hard-working and interested in learning new things.
                 </div>
-            </Reveal>
+            </Fade>
         </div>
     );
 }

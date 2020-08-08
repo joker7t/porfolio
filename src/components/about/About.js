@@ -5,6 +5,7 @@ import Avatar from '../../resources/images/avatar.JPG';
 import Heading from "../util/Heading";
 import AboutContent from './AboutContent';
 import IdeaContainer from './ideas/IdeaContainer';
+import Zoom from 'react-reveal/Zoom';
 
 const About = () => {
 
@@ -16,9 +17,11 @@ const About = () => {
                 </Row>
                 <Row>
                     <Col md={4} className='p-5'>
-                        <img className={style.AboutAvatar} src={Avatar} alt='Toan Nguyen' />
+                        <Zoom top>
+                            <img className={style.AboutAvatar} src={Avatar} alt='Toan Nguyen' />
+                        </Zoom>
                     </Col>
-                    <Col md={8}>
+                    <Col md={8} className={style.AboutContent}>
                         <AboutContent />
                     </Col>
                 </Row>
