@@ -16,7 +16,21 @@ const Footer = () => {
     return (
         <footer className={style.Footer}>
             <div className={style.FooterRollBackButton} onClick={() => scrollToElement('home')}>
-                <ArrowUp style={{ margin: 'auto' }} />
+                <div className={style.FooterRollBackButtonSvg}>
+                    <ArrowUp style={{ margin: 'auto' }} />
+                </div>
+            </div>
+
+            <div className={style.FooterIconContainer}>
+                <div className={style.FooterIcon}>
+                    <a><i className="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                </div>
+                <div className={style.FooterIcon}>
+                    <a><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                </div>
+                <div className={style.FooterIcon}>
+                    <a><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+                </div>
             </div>
 
         </footer>

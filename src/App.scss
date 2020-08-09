@@ -41,15 +41,15 @@ body{
   }
 
   &::before { 
-    top: -.8rem; 
+    top: -.6rem; 
     width: 2.5rem;
-    transition: 0.5 all;
+    transition: 0.5s all;
   }
 
   &::after { 
-    top: .8rem; 
+    top: .6rem; 
     width: 1.5rem;
-    transition: 0.5 all;
+    transition: 0.5s all;
   }
 }
 
@@ -61,11 +61,11 @@ body{
   &:hover{
     .navbar-toggler-icon{
       &::before { 
-        top: -1rem; 
+        top: -.8rem; 
       }
     
       &::after { 
-        top: 1rem; 
+        top: .8rem; 
       }
     }
   }

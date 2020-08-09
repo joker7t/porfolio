@@ -37,6 +37,22 @@
     -o-transform: translate($vertical, $horizontal);
   }
 
+  @mixin translateX($horizontal) {
+    transform: translateX($horizontal);
+    -webkit-transform: translateX($horizontal);
+    -moz-transform: translateX($horizontal);
+    -ms-transform: translateX($horizontal);
+    -o-transform: translateX($horizontal);
+  }
+
+  @mixin translateY($vertical) {
+    transform: translateX($vertical);
+    -webkit-transform: translateY($vertical);
+    -moz-transform: translateY($vertical);
+    -ms-transform: translateY($vertical);
+    -o-transform: translateY($vertical);
+  }
+
   @mixin rotateXY($degree) {
     transform: rotate($degree);
     -webkit-transform: rotate($degree);
