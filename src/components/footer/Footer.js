@@ -23,14 +23,24 @@ const Footer = () => {
 
             <div className={style.FooterIconContainer}>
                 <div className={style.FooterIcon}>
-                    <a><i className="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                    <a target='blank' href='https://www.linkedin.com/in/toan-nguyen-0b2aa41aa/'>
+                        <i className="fa fa-linkedin fa-3x" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div className={style.FooterIcon}>
-                    <a><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                    <a target='blank' href='https://www.facebook.com/toan.nguyen131196'>
+                        <i className="fa fa-facebook fa-3x" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div className={style.FooterIcon}>
-                    <a><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+                    <a target='blank' href='https://www.instagram.com/toan.ng96/?hl=vi'>
+                        <i className="fa fa-instagram fa-3x" aria-hidden="true"></i>
+                    </a>
                 </div>
+            </div>
+
+            <div className={style.FooterText}>
+                TOAN NGUYEN <span className={style.FooterTextHighlight}>@ 2020</span>
             </div>
 
         </footer>

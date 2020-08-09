@@ -61,6 +61,14 @@
     -o-transform: rotate($degree);
   }
 
+  @mixin scale($size) {
+    transform: scale($size);
+    -webkit-transform: scale($size);
+    -moz-transform: scale($size);
+    -ms-transform: scale($size);
+    -o-transform: scale($size);
+  }
+
   @mixin absCenter {
     position: absolute;
     top: 50%;
