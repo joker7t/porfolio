@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 
 const Header = () => {
     const [headerShow, setHeaderShow] = useState(false);
+    const [isShowCollapsedItems, setIsShowCollapsedItems] = useState(false);
 
     const handleScroll = () => window.scrollY >= window.innerHeight ? setHeaderShow(true) : setHeaderShow(false);
 
@@ -16,11 +17,21 @@ const Header = () => {
         //eslint-disable-next-line
     }, []);
 
+    const hanndleClickCollapse = () => {
+        setIsShowCollapsedItems(!isShowCollapsedItems);
+    }
+
     return (
         <div className={`${style.Header} ${headerShow ? style.HeaderShow : style.HeaderHidden}`}>
             <Navbar expand="md" style={{ padding: '0 1rem' }}>
 
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className='ml-auto' style={{ border: 'none' }} />
+                <Navbar.Toggle
+                    aria-controls="basic-navbar-nav"
+                    className={isShowCollapsedItems ? 'custom-collapse ml-auto' : 'ml-auto'}
+                    style={{ border: 'none' }}
+                    onClick={hanndleClickCollapse}
+                />
+
                 <Navbar.Collapse id="basic-navbar-nav">
                     <NavDropdown.Divider className={style.HeaderDivider} />
                     <Nav className={style.HeaderContainer}>

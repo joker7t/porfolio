@@ -71,11 +71,22 @@ body{
 }
 
 .navbar-toggler{
-  &.collapsed{
-    background: red;
+  &.custom-collapse{
 
     .navbar-toggler-icon{
-      background: yellow;
+        background-color: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(135deg);
+        }
+    
+        &::after {
+          width: 2.5rem;
+          top: 0;
+          transform: rotate(-135deg);
+        }
     }
+    
   }
 }
