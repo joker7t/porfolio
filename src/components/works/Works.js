@@ -1,10 +1,11 @@
 import React from 'react';
 import Heading from '../util/Heading';
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import style from './css/Works.module.scss';
 
 const Works = () => {
     return (
-        <Container>
+        <Container className={style.Works}>
             <Row>
                 <Heading text='Works' />
             </Row>

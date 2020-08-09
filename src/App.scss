@@ -1,4 +1,5 @@
 @import './components/util/css/variables.scss';
+@import './components/util/css/mixins/transition';
 
 // import Boostrap and custom it
 // change the theme
@@ -78,13 +79,13 @@ body{
 
         &::before {
           top: 0;
-          transform: rotate(135deg);
+          @include rotateXY(135deg);
         }
     
         &::after {
           width: 2.5rem;
           top: 0;
-          transform: rotate(-135deg);
+          @include rotateXY(-135deg);
         }
     }
     

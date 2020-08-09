@@ -5,6 +5,7 @@ import { Element } from 'react-scroll';
 import Contact from './contact/Contact';
 import Skills from './Skills/Skills';
 import Works from './works/Works';
+import Footer from './footer/Footer';
 
 const Landing = () => {
     return (
@@ -24,7 +25,7 @@ const Landing = () => {
             <Element name='contact'>
                 <Contact />
             </Element>
-
+            <Footer />
         </div>
     );
 }
