@@ -1,5 +1,6 @@
 @import '../../util/css/variables.scss';
 @import '../../util/css/mixins/transition';
+@import '../../util/css/mixins/respond';
 
 .Header{
     border-bottom: $color-primary 3px solid;
@@ -20,12 +21,25 @@
       visibility: visible;
       opacity: 1;
     }
+
+    &Container{
+      margin-left: 2rem;
+
+      @include respond('tab-port'){
+        margin-left: 0;
+      }
+    }
+
+    &Divider{
+      border-top: 1px solid $color-primary !important;
+    }
     
     &Button{
       color: white !important;
       padding-bottom: 0.5rem;
       margin-right: 1rem;
       @include transition(all 0.5s);
+      cursor: pointer;
 
       div{
         float: left;
@@ -36,10 +50,10 @@
           color: $color-primary !important;
       }
 
+      &Active{
+        color: $color-primary !important;
+      }
+
     };
 
-  }
-
-  .navbar-toggler-icon{
-    color: $color-tertiary !important;
   }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from './css/Header.module.scss';
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { scroller } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Header = () => {
     const [headerShow, setHeaderShow] = useState(false);
@@ -16,52 +16,57 @@ const Header = () => {
         //eslint-disable-next-line
     }, []);
 
-    const scrollToElement = (element) => {
-        scroller.scrollTo(element, {
-            duration: 1000,
-            delay: 100,
-            smooth: true
-        });
-    };
-
     return (
         <div className={`${style.Header} ${headerShow ? style.HeaderShow : style.HeaderHidden}`}>
             <Navbar expand="md" style={{ padding: '0 1rem' }}>
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='ml-auto' style={{ border: 'none' }} />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <NavDropdown.Divider />
-                    <Nav className='ml-5'>
-                        <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('about')}>
-                            <div className={style.HeaderButtonLetter}>A</div>
-                            <div className={style.HeaderButtonLetter}>b</div>
-                            <div className={style.HeaderButtonLetter}>o</div>
-                            <div className={style.HeaderButtonLetter}>u</div>
-                            <div className={style.HeaderButtonLetter}>t</div>
+                    <NavDropdown.Divider className={style.HeaderDivider} />
+                    <Nav className={style.HeaderContainer}>
+                        <Nav.Link as={Link}
+                            to='about'
+                            className={style.HeaderButton}
+                            activeClass={style.HeaderButtonActive}
+                            smooth={true}
+                            spy={true}
+                            duration={1000}
+                            delay={100}
+                        >
+                            About
                         </Nav.Link>
-                        <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('skills')}>
-                            <div className={style.HeaderButtonLetter}>S</div>
-                            <div className={style.HeaderButtonLetter}>k</div>
-                            <div className={style.HeaderButtonLetter}>i</div>
-                            <div className={style.HeaderButtonLetter}>l</div>
-                            <div className={style.HeaderButtonLetter}>l</div>
-                            <div className={style.HeaderButtonLetter}>s</div>
+                        <Nav.Link as={Link}
+                            className={style.HeaderButton}
+                            to='skills'
+                            activeClass={style.HeaderButtonActive}
+                            smooth={true}
+                            spy={true}
+                            duration={1000}
+                            delay={100}
+                        >
+                            Skills
                         </Nav.Link>
-                        <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('works')}>
-                            <div className={style.HeaderButtonLetter}>W</div>
-                            <div className={style.HeaderButtonLetter}>o</div>
-                            <div className={style.HeaderButtonLetter}>r</div>
-                            <div className={style.HeaderButtonLetter}>k</div>
-                            <div className={style.HeaderButtonLetter}>s</div>
+                        <Nav.Link as={Link}
+                            className={style.HeaderButton}
+                            to='works'
+                            activeClass={style.HeaderButtonActive}
+                            smooth={true}
+                            spy={true}
+                            duration={1000}
+                            delay={100}
+                        >
+                            Works
                         </Nav.Link>
-                        <Nav.Link className={style.HeaderButton} onClick={() => scrollToElement('contact')}>
-                            <div className={style.HeaderButtonLetter}>C</div>
-                            <div className={style.HeaderButtonLetter}>o</div>
-                            <div className={style.HeaderButtonLetter}>n</div>
-                            <div className={style.HeaderButtonLetter}>t</div>
-                            <div className={style.HeaderButtonLetter}>a</div>
-                            <div className={style.HeaderButtonLetter}>c</div>
-                            <div className={style.HeaderButtonLetter}>t</div>
+                        <Nav.Link as={Link}
+                            className={style.HeaderButton}
+                            to='contact'
+                            activeClass={style.HeaderButtonActive}
+                            smooth={true}
+                            spy={true}
+                            duration={1000}
+                            delay={100}
+                        >
+                            Contact
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
