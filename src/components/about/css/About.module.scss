@@ -1,3 +1,5 @@
+@import '../../util/css/mixins/respond';
+
 .AboutBackground{
     background-image: linear-gradient(
         to right bottom,
@@ -5,6 +7,14 @@
         rgba(white, 0.8)),
         url('../../../resources/images/background.JPG');
     background-size: cover;
+
+    @include respond('phone'){
+        background-image: linear-gradient(
+        to right bottom,
+        rgba(white, 0.8),
+        rgba(white, 0.8)),
+        url('../../../resources/images/background-small.JPG');
+    }
 }
 
 .About{
@@ -15,6 +25,7 @@
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
+        -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
         clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     }
 
