@@ -40,7 +40,8 @@ const Footer = () => {
             </div>
 
             <div className={style.FooterText}>
-                TOAN NGUYEN <span className={style.FooterTextHighlight}>@ 2020</span>
+                <span style={{ letterSpacing: '3px' }}>TOAN NGUYEN </span>
+                <span className={style.FooterTextHighlight}>@ 2020</span>
             </div>
 
         </footer>
