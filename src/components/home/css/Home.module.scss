@@ -18,7 +18,7 @@
         position: absolute;
         z-index: 499;
 
-        animation: move-all-to-left 0.75s linear 1.5s;
+        animation: move-all-to-left 1.5s linear 1.5s;
         animation-fill-mode: both;  
 
         &Container{
@@ -43,8 +43,6 @@
                     top: 0;
                     right: 0;
                     background-color: $color-home;
-                    animation: move-all-to-left 0.75s linear 1.5s;
-                    animation-fill-mode: both;
                 }
             }
     
