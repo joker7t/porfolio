@@ -1,5 +1,6 @@
 @import '../../../util/css/variables.scss';
 @import '../../../util/css/mixins/respond';
+@import '../../../util/css/mixins/transition';
 
 .Idea{
     position: relative;
@@ -9,6 +10,7 @@
     width: 200px;
     height: 200px;
     margin: 0 auto 1rem auto;
+    @include transition(0.5s all);
 
     @include respond('tab-land'){
         width: 150px;

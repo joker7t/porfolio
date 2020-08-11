@@ -46,7 +46,7 @@
   }
 
   @mixin translateY($vertical) {
-    transform: translateX($vertical);
+    transform: translateY($vertical);
     -webkit-transform: translateY($vertical);
     -moz-transform: translateY($vertical);
     -ms-transform: translateY($vertical);

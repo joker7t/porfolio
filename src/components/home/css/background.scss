@@ -1,4 +1,4 @@
-
+@import '../../util//css//mixins/transition';
 
 // n is number of stars required
 @function multiple-box-shadow ($n) {
@@ -75,10 +75,10 @@ $shadows-big:    multiple-box-shadow(150);
     
 @keyframes animStar{
   from{
-    transform: translateY(0px)
+    @include translateY(0px)
   }
   to{	
-    transform: translateY(-2000px)
+    @include translateY(-2000px)
   }
 }
     

@@ -91,3 +91,18 @@ body{
     
   }
 }
+
+.form-control, .form-control:focus{
+  font-family: 'Cutive', serif !important;
+  background-color: #222222;
+  color: #dddddd;
+  margin-top: 2px;
+  border-radius: 0;
+  border: 0;
+  @include transition(0.75s all);
+}
+
+.form-control:focus{
+  box-shadow: none;
+  border-bottom: 1px solid $color-primary;
+}

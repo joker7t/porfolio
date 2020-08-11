@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Form, Button } from "react-bootstrap";
 import style from './css/Contact.module.scss';
 import Heading from '../util/Heading';
+import { ReactComponent as ContactHeader } from "../../resources/images/contact/contact-header.svg";
 
 const Contact = () => {
     return (
@@ -20,10 +21,22 @@ const Contact = () => {
                 </iframe>
             </div>
             <div className={style.Background}></div>
+            <ContactHeader />
             <Container className={style.Contact}>
                 <Row>
                     <Heading text='Contact' />
                 </Row>
+                <div className={style.FormContainer}>
+
+                    <Form className={`${style.Form} mx-auto`}>
+                        <Form.Control type="name" placeholder="Your name" />
+                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Control as="textarea" placeholder="Enter message" rows="5" />
+                        <Button type="submit" className={style.FormSubmit}>
+                            SEND
+                        </Button>
+                    </Form>
+                </div>
             </Container>
         </div>
     );

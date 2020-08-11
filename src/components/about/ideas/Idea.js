@@ -10,13 +10,13 @@ const Idea = ({ children, ideaContent }) => {
     const show = () => {
         TweenMax.from(
             imageRef.current,
-            1.5,
+            1,
             { transform: 'rotateY(90deg)', ease: Linear.easeNone }
         )
         TweenMax.from(
             contentRef.current,
             1,
-            { opacity: 0, ease: Linear.easeNone, delay: 1.5 }
+            { opacity: 0, ease: Linear.easeNone, delay: 0.75 }
         )
     }
 
