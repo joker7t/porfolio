@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import * as am4core from "@amcharts/amcharts4/core";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import * as am4plugins_wordCloud from "@amcharts/amcharts4/plugins/wordCloud";
 import data from './skills-data';
 import Heading from '../util/Heading';
 import { Container, Row, Col } from "react-bootstrap";
+import Reveal from 'react-reveal/Reveal';
 import style from './css/Skills.module.scss';
 
 const Skills = () => {
 
-    useEffect(() => {
+    const show = () => {
         am4core.ready(function () {
 
             // Themes begin
@@ -38,9 +39,7 @@ const Skills = () => {
             hoverState.properties.fill = am4core.color("#C98D4B");
 
         });
-
-        //eslint-disable-next-line
-    }, []);
+    }
 
     return (
         <div style={{ backgroundColor: '#F5F5F5' }}>
@@ -48,13 +47,15 @@ const Skills = () => {
                 <Row>
                     <Heading text='Skills' />
                 </Row>
-                <Row className={style.Container}>
-                    <Col lg={7} className={style.Left}>
-                        sdfdsfdsfds
+                <Reveal onReveal={() => show()}>
+                    <Row className={style.Container}>
+                        <Col lg={7} className={style.Left}>
+                            sdfdsfdsfds
                     </Col>
-                    <Col lg={5} className={style.Right} style={{ padding: '0' }} id='skill-chart'>
-                    </Col>
-                </Row>
+                        <Col lg={5} className={style.Right} style={{ padding: '0' }} id='skill-chart'>
+                        </Col>
+                    </Row>
+                </Reveal>
             </Container>
         </div>
     );
