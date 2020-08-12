@@ -76,13 +76,14 @@ const Header = () => {
                             spy={true}
                             duration={1000}
                             delay={100}
+                            offset={75}
                         >
                             Contact
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </div>
+        </div >
     );
 }
 

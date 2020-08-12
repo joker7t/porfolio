@@ -13,23 +13,23 @@ const Heading = ({ text }) => {
         timeline
             .fromTo(
                 headingLineTopRef.current,
-                0.7,
+                1,
                 { scaleX: 0, opacity: 0 },
-                { scaleX: 1, opacity: 1, ease: Power2.easeOut, outlineOffset: '-=875' }
+                { scaleX: 1, opacity: 1, ease: Power2.easeOut, outlineOffset: '-=875', delay: 0.4 }
                 , 0.2
             )
             .fromTo(
                 headingLineBottomRef.current,
-                0.7,
+                1,
                 { scaleX: 0, opacity: 0 },
-                { scaleX: 1, opacity: 1, ease: Power2.easeOut, outlineOffset: '-=875' }
+                { scaleX: 1, opacity: 1, ease: Power2.easeOut, outlineOffset: '-=875', delay: 0.4 }
                 , 0.2
             );
 
         lettersRef.current.forEach((letterRef, i) => {
             TweenMax.fromTo(
                 letterRef,
-                0.6,
+                1,
                 { scaleX: 0.3, opacity: 0 },
                 { scaleX: 1, opacity: 1, ease: Power2.easeOut, delay: 0.15 * i },
             )

@@ -72,6 +72,8 @@ body{
 }
 
 .navbar-toggler{
+  @include translateX(1rem);
+
   &.custom-collapse{
 
     .navbar-toggler-icon{
@@ -99,10 +101,22 @@ body{
   margin-top: 2px;
   border-radius: 0;
   border: 0;
-  @include transition(0.75s all);
 }
 
 .form-control:focus{
   box-shadow: none;
   border-bottom: 1px solid $color-primary;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus{
+  background-color: #222222 !important;
+  color: #dddddd !important;
+  box-shadow:0 0 0 50px #222222 inset !important;
+  -webkit-box-shadow:0 0 0 50px #222222 inset !important;
+  -webkit-text-fill-color: #dddddd !important;
 }

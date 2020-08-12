@@ -4,6 +4,7 @@
 
 .ContactContainer{
     position: relative;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
 
 .Contact{
@@ -16,40 +17,8 @@
     padding-bottom: 5rem;
 }
 
-.Background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -50;
-    background-color: rgba(#000000, 0.8);
-}
-
-.Map{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-}
-
 .Form{
     margin-top: 3rem;
-    width: 35rem;
-
-    @include respond('tab-land'){
-        width: 30rem;
-    }
-
-    @include respond('tab-port'){
-        width: 25rem;
-    }
-
-    @include respond('phone'){
-        width: 20rem;
-    }
 
     &Submit{
         @include transition(0.5s all);
@@ -69,4 +38,5 @@
             background-position: 100%;
         }
     }
+
 }
