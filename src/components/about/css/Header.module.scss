@@ -10,7 +10,7 @@
     position: fixed;
     z-index: 1000;
     width: 100%;
-    transition: 1s all;
+    @include transition(0.75s all);
 
     &Hidden{
       visibility: hidden;

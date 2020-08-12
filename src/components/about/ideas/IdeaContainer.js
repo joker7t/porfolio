@@ -10,7 +10,7 @@ import { ReactComponent as PowerDeisgn } from "../../../resources/images/about/s
 const IdeaContainer = () => {
     const data = {
         speedDesignText: 'I love to make website with a high performance',
-        responsiveDesignText: 'My websites easily render on various resolutions, screen sizes, and browsers',
+        responsiveDesignText: 'My websites render on various resolutions, screen sizes, and browsers',
         designText: 'Clear, user-friendly design and navigation are the main things in my websites',
         powerDeisgnText: 'Dynamic wesite is one of my highest priorities'
     };
