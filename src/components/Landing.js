@@ -9,7 +9,7 @@ import Footer from './footer/Footer';
 
 const Landing = () => {
     return (
-        <div>
+        <div style={{ overflow: 'hidden' }}>
             <Element name='home'>
                 <Home />
             </Element>

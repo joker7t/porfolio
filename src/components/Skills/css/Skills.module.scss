@@ -13,17 +13,16 @@
         background-color: red;
 
         @include respond('tab-land'){
-            z-index: 2;
+            z-index: 10;
             background-color: transparent;
         }
     }
 
-    .Right{
-        height: 100vh;
-        background-color: blue;
-
+    .Right{        
         @include respond('tab-land'){
             position: absolute;
+            height: 100%;
+
             &::before{
                 content: "";
                 position: absolute;
@@ -31,7 +30,8 @@
                 height: 100%;
                 top: 0;
                 left: 0;
-                background-color: rgba(white, 0.8);
+                z-index: 2;
+                background-color: rgba(#F5F5F5, 0.8);
                 
             }
         }
