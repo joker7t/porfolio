@@ -1,22 +1,23 @@
 import React, { useRef } from 'react';
 import style from './css/Idea.module.scss';
 import Reveal from 'react-reveal/Reveal';
-import { TweenMax, Linear } from 'gsap';
+import { TweenMax, Power2 } from 'gsap';
 
 const Idea = ({ children, ideaContent }) => {
     const imageRef = useRef(null);
     const contentRef = useRef(null);
 
     const show = () => {
-        TweenMax.from(
+        TweenMax.fromTo(
             imageRef.current,
-            1,
-            { transform: 'rotateY(90deg)', ease: Linear.easeNone }
+            0.75,
+            { transform: 'rotateY(180deg)' },
+            { transform: 'rotateY(0)', ease: Power2.easeInOut }
         )
         TweenMax.from(
             contentRef.current,
             1,
-            { opacity: 0, ease: Linear.easeNone, delay: 0.75 }
+            { opacity: 0, ease: Power2.easeOut, delay: 0.5 }
         )
     }
 

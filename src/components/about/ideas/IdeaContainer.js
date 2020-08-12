@@ -18,22 +18,22 @@ const IdeaContainer = () => {
     return (
         <Row>
             <Col md={3} xs={6} className='p-3'>
-                <Idea ideaContent={data.speedDesignText}>
+                <Idea ideaContent={data.speedDesignText} delay={0.1}>
                     <SpeedDesign className={style.IdeaImage} />
                 </Idea>
             </Col>
             <Col md={3} xs={6} className='p-3'>
-                <Idea ideaContent={data.responsiveDesignText}>
+                <Idea ideaContent={data.responsiveDesignText} delay={0.2}>
                     <ResponsiveDesign className={style.IdeaImage} />
                 </Idea>
             </Col>
             <Col md={3} xs={6} className='p-3'>
-                <Idea ideaContent={data.designText}>
+                <Idea ideaContent={data.designText} delay={0.3}>
                     <Design className={style.IdeaImage} />
                 </Idea>
             </Col>
             <Col md={3} xs={6} className='p-3'>
-                <Idea ideaContent={data.powerDeisgnText}>
+                <Idea ideaContent={data.powerDeisgnText} delay={0.4}>
                     <PowerDeisgn className={style.IdeaImage} />
                 </Idea>
             </Col>
