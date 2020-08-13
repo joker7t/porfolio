@@ -3,6 +3,8 @@
 .Container{
     height: 100%;
     display: flex;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 4px rgba(black,.3);
 
     .Name{
         width: 7rem;
@@ -20,7 +22,8 @@
         .Label{
             position: absolute;
             right: 0.5rem;
-            top: 3px;
+            top: 5px;
+            color: $color-secondary;
         }
     }
 }

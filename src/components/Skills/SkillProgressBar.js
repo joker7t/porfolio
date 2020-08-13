@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import style from './css/SkillProgressBar.module.scss';
+import Reveal from 'react-reveal/Reveal';
 
 const SkillProgressBar = ({ name, percentage }) => {
     return (
@@ -9,7 +10,9 @@ const SkillProgressBar = ({ name, percentage }) => {
                 {name}
             </div>
             <div className={style.Progress}>
-                <ProgressBar now={percentage} />
+                <Reveal>
+                    <ProgressBar now={percentage} />
+                </Reveal>
                 <div className={style.Label}>{`${percentage}%`}</div>
             </div>
         </div>

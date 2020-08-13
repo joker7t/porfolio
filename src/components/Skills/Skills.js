@@ -31,8 +31,8 @@ const Skills = () => {
                 series.heatRules.push({
                     "target": series.labels.template,
                     "property": "fill",
-                    "min": am4core.color("#000000"),
-                    "max": am4core.color("#C98D4B"),
+                    "min": am4core.color("#0000CC"),
+                    "max": am4core.color("#CC00CC"),
                     "dataField": "value"
                 });
                 const hoverState = series.labels.template.states.create("hover");
