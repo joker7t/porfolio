@@ -9,7 +9,7 @@ const SkillProgressBar = ({ name, percentage }) => {
     const show = () => {
         setTimeout(() => {
             setSelfPercentage(percentage);
-        }, 1000);
+        }, 500);
     }
 
     return (

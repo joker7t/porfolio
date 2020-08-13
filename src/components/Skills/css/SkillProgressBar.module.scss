@@ -8,7 +8,8 @@
 
     .Name{
         width: 7rem;
-        background-color: $color-primary;
+        background: linear-gradient(to right, #d1ab82, $color-primary);
+        // background-color: $color-primary;
         color: $color-secondary;
         display: flex;
         align-items: center;
