@@ -9,8 +9,7 @@
     }
 
     .Left{
-        height: 100vh;
-        background-color: red;
+        height: 80vh;
 
         @include respond('tab-land'){
             z-index: 10;
