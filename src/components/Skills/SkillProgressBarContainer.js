@@ -4,7 +4,7 @@ import SkillProgressBar from './SkillProgressBar';
 const SkillProgressBarContainer = () => {
     return (
         <div>
-            <SkillProgressBar />
+            <SkillProgressBar name='Javascript' percentage={60} />
         </div>
     );
 }

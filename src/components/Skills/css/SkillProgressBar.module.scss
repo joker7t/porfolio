@@ -1,0 +1,26 @@
+@import '../../util/css/variables.scss';
+
+.Container{
+    height: 100%;
+    display: flex;
+
+    .Name{
+        width: 7rem;
+        background-color: $color-primary;
+        color: $color-secondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Progress{
+        flex-grow: 1;
+        position: relative;
+
+        .Label{
+            position: absolute;
+            right: 0.5rem;
+            top: 3px;
+        }
+    }
+}

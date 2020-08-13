@@ -120,3 +120,14 @@ textarea:-webkit-autofill:focus{
   -webkit-box-shadow:0 0 0 50px #222222 inset !important;
   -webkit-text-fill-color: #dddddd !important;
 }
+
+.progress{
+  height: 2.25rem;
+  border-radius: 0;
+  background-color: #cccccc;
+  border: 3px solid $color-primary;
+
+  .progress-bar{
+    background-color: $color-secondary;
+  }
+}
