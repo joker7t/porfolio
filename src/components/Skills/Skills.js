@@ -4,7 +4,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import * as am4plugins_wordCloud from "@amcharts/amcharts4/plugins/wordCloud";
 import data from './skills-data';
 import Heading from '../util/Heading';
-import SkillProgressBar from './SkillProgressBar';
+import SkillProgressBarContainer from './SkillProgressBarContainer';
 import { Container, Row, Col } from "react-bootstrap";
 import Reveal from 'react-reveal/Reveal';
 import style from './css/Skills.module.scss';
@@ -51,7 +51,7 @@ const Skills = () => {
                 <Reveal onReveal={() => show()}>
                     <Row className={style.Container}>
                         <Col lg={7} className={style.Left}>
-                            <SkillProgressBar />
+                            <SkillProgressBarContainer />
                         </Col>
                         <Col lg={5} className={style.Right} style={{ padding: '0' }} id='skill-chart'>
                         </Col>
