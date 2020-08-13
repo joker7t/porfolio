@@ -6,15 +6,15 @@ const SkillProgressBarContainer = () => {
     const data = [
         {
             name: 'Javascript',
-            percentage: 60
+            percentage: 80
         },
         {
             name: 'Java',
-            percentage: 60
+            percentage: 80
         },
         {
             name: 'React',
-            percentage: 60
+            percentage: 80
         },
         {
             name: 'Spring',
@@ -22,7 +22,7 @@ const SkillProgressBarContainer = () => {
         },
         {
             name: 'JSF',
-            percentage: 60
+            percentage: 70
         },
         {
             name: 'NodeJS',
@@ -30,19 +30,19 @@ const SkillProgressBarContainer = () => {
         },
         {
             name: 'HTML',
-            percentage: 60
+            percentage: 70
         },
         {
             name: 'CSS',
-            percentage: 60
+            percentage: 70
         },
         {
             name: 'UI Design',
-            percentage: 60
+            percentage: 50
         },
         {
             name: 'Docker',
-            percentage: 60
+            percentage: 50
         }
     ];
 
