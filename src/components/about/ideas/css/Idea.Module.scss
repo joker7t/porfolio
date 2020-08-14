@@ -6,11 +6,13 @@
     position: relative;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    background-color: $color-tertiary;
+    // background-color: $color-tertiary;
+    background: radial-gradient(ellipse at bottom, $color-primary 0%, #c99b69 100%);
     width: 200px;
     height: 200px;
     margin: 0 auto 1rem auto;
     @include transition(0.5s all);
+    @include rotateY(180deg);
 
     @include respond('tab-land'){
         width: 150px;

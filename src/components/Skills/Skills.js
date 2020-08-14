@@ -39,7 +39,7 @@ const Skills = () => {
                 hoverState.properties.fill = am4core.color("#C98D4B");
 
             });
-        }, 500);
+        }, 1000);
     }
 
     return (

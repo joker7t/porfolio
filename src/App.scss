@@ -128,7 +128,7 @@ textarea:-webkit-autofill:focus{
   @include transition(1s all ease-in-out);
 
   .progress-bar{
-    background-color: $color-secondary;
+    background-color: rgba($color-secondary, 0.8);
     @include transition(1s all ease-in-out);
   }
 }

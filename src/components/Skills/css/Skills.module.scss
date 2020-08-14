@@ -12,9 +12,22 @@
         margin-bottom: 1rem;
     }
 
-    .Right{        
+    .Right{      
+        position: relative;  
         @include respond('tab-land'){
             height: 500px;
+        }
+
+        &::before{
+            position: absolute;
+            content: "";
+            display: inline-block;
+            left: 0;
+            bottom: 0;
+            width: 4rem;
+            height: 2rem;
+            background-color: #F5F5F5;
+            z-index: 10;
         }
     }
 }

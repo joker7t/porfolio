@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import style from './css/Idea.module.scss';
 import Reveal from 'react-reveal/Reveal';
+import Bounce from 'react-reveal/Bounce';
 import { TweenMax, Power2 } from 'gsap';
 
 const Idea = ({ children, ideaContent }) => {
@@ -10,15 +11,16 @@ const Idea = ({ children, ideaContent }) => {
     const show = () => {
         TweenMax.fromTo(
             imageRef.current,
-            1,
-            { transform: 'rotateY(180deg)' },
+            0.75,
+            { transform: 'rotateY(-180deg)' },
             { transform: 'rotateY(0deg)', ease: Power2.easeInOut }
-        )
+        );
+
         TweenMax.from(
             contentRef.current,
             0.7,
             { opacity: 0, ease: Power2.easeOut, delay: 0.7 }
-        )
+        );
     }
 
     return (

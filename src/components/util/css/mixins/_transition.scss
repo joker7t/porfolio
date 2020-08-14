@@ -61,6 +61,14 @@
     -o-transform: rotate($degree);
   }
 
+  @mixin rotateY($degree) {
+    transform: rotateY($degree);
+    -webkit-transform: rotateY($degree);
+    -moz-transform: rotateY($degree);
+    -ms-transform: rotateY($degree);
+    -o-transform: rotateY($degree);
+  }
+
   @mixin scale($size) {
     transform: scale($size);
     -webkit-transform: scale($size);
