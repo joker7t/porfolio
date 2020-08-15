@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import style from './css/Contact.module.scss';
 import Heading from '../util/Heading';
@@ -10,12 +10,27 @@ import { TweenMax, Power2 } from 'gsap';
 const Contact = () => {
     const formRef = useRef(null);
 
+    const [contact, setContact] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [notifyMessage, setNotifyMessage] = useState(false);
+
     const show = () => {
         TweenMax.from(
             formRef.current,
             1,
             { scale: 0.2, ease: Power2.easeInOut }
         )
+    }
+
+    const handleChange = (e) => {
+        setContact({ ...contact, [e.target.name]: e.target.value });
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
     }
 
     return (
@@ -30,10 +45,33 @@ const Contact = () => {
                 <Row className={style.Form}>
                     <Col md={5}>
                         <Reveal onReveal={() => show()}>
-                            <Form className='mx-auto' ref={formRef}>
-                                <Form.Control type="name" placeholder="Your name" />
-                                <Form.Control type="email" placeholder="Enter email" />
-                                <Form.Control as="textarea" placeholder="Enter message" rows="5" />
+                            <Form className='mx-auto' ref={formRef} onSubmit={handleSubmit}>
+                                <Form.Control
+                                    type="name"
+                                    required
+                                    placeholder="Your name"
+                                    name='name'
+                                    value={contact.name}
+                                    onChange={handleChange}
+                                />
+                                <Form.Control
+                                    type="email"
+                                    required
+                                    placeholder="Enter email"
+                                    name='email'
+                                    value={contact.email}
+                                    onChange={handleChange}
+                                />
+                                <Form.Control
+                                    as="textarea"
+                                    required
+                                    placeholder="Enter message"
+                                    rows="5"
+                                    name='message'
+                                    value={contact.message}
+                                    onChange={handleChange}
+                                />
+                                {notifyMessage ? <div className={style.NotifyMessage}>Send successfully</div> : null}
                                 <Button type="submit" className={style.FormSubmit}>
                                     SEND
                                 </Button>
