@@ -1,13 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import style from './css/Header.module.scss';
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-scroll";
 
 const Header = () => {
+    const progressBarRef = useRef(null);
+
     const [headerShow, setHeaderShow] = useState(false);
     const [isShowCollapsedItems, setIsShowCollapsedItems] = useState(false);
 
-    const handleScroll = () => window.scrollY >= window.innerHeight ? setHeaderShow(true) : setHeaderShow(false);
+    const handleScroll = () => {
+        window.scrollY >= window.innerHeight ? setHeaderShow(true) : setHeaderShow(false);
+
+        // progressbar
+        const scroll = document.documentElement.scrollTop;
+        const dh = document.documentElement.scrollHeight;
+        const wh = window.innerHeight;
+        //maximum is 85% because of header
+        const scrollPercent = (scroll / (dh - wh)) * 85;
+        progressBarRef.current.style.height = `${scrollPercent}%`;
+    }
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -23,7 +35,7 @@ const Header = () => {
 
     return (
         <div className={`${style.Header} ${headerShow ? style.HeaderShow : style.HeaderHidden}`}>
-            <div className={style.ProgressBar}></div>
+            <div className={style.ProgressBar} ref={progressBarRef}></div>
             <Navbar expand="md" style={{ padding: '0 1rem' }}>
 
                 <Navbar.Toggle
