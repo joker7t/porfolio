@@ -12,8 +12,8 @@ const Idea = ({ children, ideaContent }) => {
         TweenMax.fromTo(
             imageRef.current,
             0.75,
-            { transform: 'rotateY(-180deg)' },
-            { transform: 'rotateY(0deg)', ease: Power2.easeInOut }
+            { transform: 'rotateY(-180deg)', opacity: 0 },
+            { transform: 'rotateY(0deg)', opacity: 1, ease: Power2.easeInOut }
         );
 
         TweenMax.from(

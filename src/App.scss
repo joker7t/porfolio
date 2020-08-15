@@ -1,6 +1,23 @@
 @import './components/util/css/variables.scss';
 @import './components/util/css/mixins/transition';
 
+@font-face {
+  font-family: 'Cosi Azure';
+  src: local('Cosi Azure'), url(./resources/fonts/Cosi-Azure/Cosi-Azure-Black-Stencil.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Cosi Azure';
+    font-weight: 900;
+    src: local('Cosi Azure'), url(./resources/fonts/Cosi-Azure/Cosi-Azure-Black.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Cosi Azure';
+    font-weight: 900;
+    src: local('Cosi Azure'), url(./resources/fonts/Cosi-Azure/Cosi-Azure-Bold.otf) format('opentype');
+}
+
 // import Boostrap and custom it
 // change the theme
 $theme-colors: (
@@ -13,7 +30,7 @@ $theme-colors: (
 
 body{
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -132,3 +149,57 @@ textarea:-webkit-autofill:focus{
     @include transition(1s all ease-in-out);
   }
 }
+
+::-webkit-scrollbar{
+  width: 0;
+}
+
+.progressbar{
+  position: fixed;
+  top: 0;
+  left: 90%;
+  background: rgba(#000000, 0.4);
+  width: 2px;
+  z-index: 1001;
+}
+
+.navigation-wrapper{
+  ul{
+    margin-top: 240px;
+    margin-left: 100px;
+    margin-bottom: 200px;
+    list-style: none;
+  }
+}
+
+.navigation-item{
+  display: block;
+  user-select: none;
+  margin: 120px 0;
+
+  a{
+    font-size: 100px;
+    text-decoration: none;
+    color: #1B2735;
+    font-family: 'Cosi Azure';
+  }
+
+  span{
+    position: relative;
+    display: block;
+
+    &::before{
+      width: 0;
+      color: $color-primary;
+      overflow: hidden;
+      position: absolute;
+      content: attr(data-text);
+      transition: all 1s cubic-bezier(0.84, 0 , 0.08, 0.99); 
+    }
+
+    &:hover::before{
+      width: 100%;
+    }
+  }
+}
+

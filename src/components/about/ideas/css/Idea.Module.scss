@@ -11,8 +11,9 @@
     width: 200px;
     height: 200px;
     margin: 0 auto 1rem auto;
-    @include transition(0.5s all);
+    @include transition(0.5s all ease-in-out);
     @include rotateY(180deg);
+    opacity: 0;
 
     @include respond('tab-land'){
         width: 150px;
