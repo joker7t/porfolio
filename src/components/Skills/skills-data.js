@@ -1,58 +1,102 @@
-export default [{
-    "tag": "javascript",
-    "count": "1765836"
-}, {
-    "tag": "java",
-    "count": "1517355"
-}, {
-    "tag": "c#",
-    "count": "1287629"
-}, {
-    "tag": "php",
-    "count": "1263946"
-}, {
-    "tag": "android",
-    "count": "1174721"
-}, {
-    "tag": "python",
-    "count": "1116769"
-}, {
-    "tag": "jquery",
-    "count": "944983"
-}, {
-    "tag": "html",
-    "count": "805679"
-}, {
-    "tag": "c++",
-    "count": "606051"
-}, {
-    "tag": "ios",
-    "count": "591410"
-}, {
-    "tag": "css",
-    "count": "574684"
-}, {
-    "tag": "mysql",
-    "count": "550916"
-}, {
-    "tag": "sql",
-    "count": "479892"
-}, {
-    "tag": "asp.net",
-    "count": "343092"
-}, {
-    "tag": "ruby-on-rails",
-    "count": "303311"
-}, {
-    "tag": "c",
-    "count": "296963"
-}, {
-    "tag": "arrays",
-    "count": "288445"
-}, {
-    "tag": "objective-c",
-    "count": "286823"
-}, {
-    "tag": ".net",
-    "count": "280079"
-}];
+export default [
+    {
+        "tag": "javascript",
+        "count": "100"
+    },
+    {
+        "tag": "java",
+        "count": "100"
+    },
+    {
+        "tag": "react",
+        "count": "90"
+    },
+    {
+        "tag": "spring",
+        "count": "60"
+    },
+    {
+        "tag": "jsf",
+        "count": "70"
+    },
+    {
+        "tag": "nodeJS",
+        "count": "60"
+    },
+    {
+        "tag": "html5",
+        "count": "70"
+    },
+    {
+        "tag": "css3",
+        "count": "70"
+    },
+    {
+        "tag": "Docker",
+        "count": "50"
+    },
+    {
+        "tag": "kubernetes",
+        "count": "50"
+    },
+    {
+        "tag": "nginx",
+        "count": "50"
+    },
+    {
+        "tag": "mysql",
+        "count": "60"
+    },
+    {
+        "tag": "mongodb",
+        "count": "70"
+    },
+    {
+        "tag": "postgresql",
+        "count": "70"
+    },
+    {
+        "tag": "jquery",
+        "count": "70"
+    },
+    {
+        "tag": "ajax",
+        "count": "60"
+    },
+    {
+        "tag": "redux",
+        "count": "70"
+    },
+    {
+        "tag": "gsap",
+        "count": "70"
+    },
+    {
+        "tag": "CI-CD",
+        "count": "50"
+    },
+    {
+        "tag": "scrum",
+        "count": "80"
+    },
+    {
+        "tag": "Kanban",
+        "count": "80"
+    },
+    {
+        "tag": "Agile",
+        "count": "80"
+    },
+    {
+        "tag": "drools",
+        "count": "60"
+    },
+    {
+        "tag": "expressjs",
+        "count": "70"
+    },
+    {
+        "tag": "microservices",
+        "count": "60"
+    },
+];
