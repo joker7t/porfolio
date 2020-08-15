@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Heading from '../util/Heading';
 import { Container, Row } from "react-bootstrap";
 import style from './css/Works.module.scss';
+import { TweenMax } from 'gsap';
 
 const Works = () => {
+    const projectPreviewRef = useRef(null);
     const data = [
         {}
     ];
+
+    useEffect(() => {
+        TweenMax.set(projectPreviewRef.current, { width: 0 });
+    });
 
     const show = () => {
 
@@ -19,7 +25,7 @@ const Works = () => {
             </Row>
             <div className='navigation-wrapper'>
                 <div className='project-preview-wrapper'>
-                    <div className='project-wrapper'></div>
+                    <div className='project-preview' ref={projectPreviewRef}></div>
                 </div>
                 <ul>
                     <li className='navigation-item'>

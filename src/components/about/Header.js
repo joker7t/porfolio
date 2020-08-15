@@ -23,6 +23,7 @@ const Header = () => {
 
     return (
         <div className={`${style.Header} ${headerShow ? style.HeaderShow : style.HeaderHidden}`}>
+            <div className={style.ProgressBar}></div>
             <Navbar expand="md" style={{ padding: '0 1rem' }}>
 
                 <Navbar.Toggle

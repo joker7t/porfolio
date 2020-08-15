@@ -26,7 +26,6 @@ const Landing = () => {
                 <Contact />
             </Element>
             <Footer />
-            <div className='progressbar'></div>
         </div>
     );
 }
