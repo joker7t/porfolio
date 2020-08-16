@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import style from './css/Idea.module.scss';
 import Reveal from 'react-reveal/Reveal';
-import Bounce from 'react-reveal/Bounce';
 import { TweenMax, Power2 } from 'gsap';
 
 const Idea = ({ children, ideaContent }) => {

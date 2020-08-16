@@ -6,8 +6,11 @@ import { ReactComponent as ContactHeader } from "../../resources/images/contact/
 import Flip from 'react-reveal/Flip';
 import Reveal from 'react-reveal/Reveal';
 import { TweenMax, Power2 } from 'gsap';
+import axios from 'axios';
 
 const Contact = () => {
+    const EMAIL_HOST_API = 'https://cors-anywhere.herokuapp.com/https://waves-joker7nbt.herokuapp.com/api/porfolio/send-message';
+
     const formRef = useRef(null);
 
     const [contact, setContact] = useState({
@@ -16,6 +19,7 @@ const Contact = () => {
         message: ''
     });
     const [notifyMessage, setNotifyMessage] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(false);
 
     const show = () => {
         TweenMax.from(
@@ -27,10 +31,29 @@ const Contact = () => {
 
     const handleChange = (e) => {
         setContact({ ...contact, [e.target.name]: e.target.value });
+        setErrorMessage(false);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            await axios.post(EMAIL_HOST_API, {
+                name: contact.name,
+                email: contact.email,
+                message: contact.message
+            });
+            setContact({
+                name: '',
+                email: '',
+                message: ''
+            });
+            setNotifyMessage(true);
+            setTimeout(() => {
+                setNotifyMessage(false);
+            }, 3000);
+        } catch (error) {
+            setErrorMessage(true);
+        }
     }
 
     return (
@@ -72,6 +95,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                 />
                                 {notifyMessage ? <div className={style.NotifyMessage}>Send successfully</div> : null}
+                                {errorMessage ? <div className={style.ErrorMessage}>Send failed</div> : null}
                                 <Button type="submit" className={style.FormSubmit}>
                                     SEND
                                 </Button>
