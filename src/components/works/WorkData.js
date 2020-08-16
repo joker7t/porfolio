@@ -1,23 +1,30 @@
 export default [
     {
-        name: 'the waves'
+        name: 'man city',
+        url: "https://mcfc-joker7nbt.netlify.app/"
     },
     {
-        name: 'man city'
+        name: 'the waves',
+        url: "https://waves-joker7nbt.herokuapp.com/"
     },
     {
-        name: 'the venue'
+        name: 'the venue',
+        url: "https://thevenue-joker7nbt.netlify.app/"
     },
     {
-        name: 'natours'
+        name: 'natours',
+        url: "https://natours-joker7nbt.netlify.app/"
     },
     {
-        name: 'trillo'
+        name: 'trillo',
+        url: "https://trillo-joker7nbt.netlify.app/"
     },
     {
-        name: 'slack chat'
+        name: 'slack chat',
+        url: "https://slackchat-joker7nbt.netlify.app/"
     },
     {
-        name: 'shopping'
+        name: 'shopping',
+        url: "https://shoppingwebsite-template-joker7nbt.netlify.app/"
     }
 ];
