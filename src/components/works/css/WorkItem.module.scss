@@ -1,38 +1,47 @@
 @import '../../util/css/variables.scss';
+@import '../../util/css/mixins/respond';
 
 .WorkItem{
 
     .Item{
-        display: block;
-        user-select: none;
-        margin: 120px 0;
-    
+        margin-bottom: 4rem;
         .Name{
-            font-size: 100px;
+            font-size: 7rem;
             text-decoration: none;
             color: #1B2735;
             font-family: 'Cosi Azure';
+            span{
+                position: relative;
+                overflow: hidden;
+                display: block;
+        
+                &::before{
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    color: $color-primary;
+                    overflow: hidden;
+                    position: absolute;
+                    content: attr(data-text);
+                    transition: all 1s cubic-bezier(0.84, 0 , 0.08, 0.99); 
+                }
+        
+                &:hover::before{
+                    width: 100%;
+                }
+            }
         }
-    
-        span{
-            position: relative;
-            display: block;
-            overflow: hidden;
-    
-            &::before{
-            top: 0;
-            left: 0;
-            width: 0;
-            color: $color-primary;
-            overflow: hidden;
-            position: absolute;
-            content: attr(data-text);
-            transition: all 1s cubic-bezier(0.84, 0 , 0.08, 0.99); 
-            }
-    
-            &:hover::before{
+
+        .Picture{
             width: 100%;
-            }
+            background: url(../../../resources/images/works/image_not_availble.png) no-repeat 50% 50%;
+            background-size: 100% 100%;
+            overflow: hidden;
+            z-index: 10000;
+            height: 500px;
+            margin-left: auto;
         }
     }
+
+    
 }
