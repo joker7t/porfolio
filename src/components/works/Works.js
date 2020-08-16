@@ -8,7 +8,27 @@ const Works = () => {
     const projectPreviewRef = useRef(null);
     const itemRef = useRef(null);
     const data = [
-        {}
+        {
+            name: 'the waves'
+        },
+        {
+            name: 'man city'
+        },
+        {
+            name: 'the venue'
+        },
+        {
+            name: 'natours'
+        },
+        {
+            name: 'trillo'
+        },
+        {
+            name: 'slack chat'
+        },
+        {
+            name: 'shopping'
+        },
     ];
 
     useEffect(() => {
@@ -32,9 +52,13 @@ const Works = () => {
 
     });
 
-    const show = () => {
-
-    };
+    const showItems = () => data.map((item, i) =>
+        <div key={i} className='navigation-item' ref={itemRef}>
+            <div className='navigation-link'>
+                <span data-text={item.name}>{item.name}</span>
+            </div>
+        </div>
+    )
 
     return (
         <Container className={style.Works}>
@@ -45,38 +69,9 @@ const Works = () => {
                 <div className='project-preview-wrapper'>
                     <div className='project-preview' ref={projectPreviewRef}></div>
                 </div>
-                <ul>
-                    <li className='navigation-item' ref={itemRef}>
-                        <a href="" className='navigation-link navigation-link-1'>
-                            <span data-text="Toan">Toan</span>
-                        </a>
-                    </li>
-                    <li className='navigation-item'>
-                        <a href="" className='navigation-link navigation-link-2'>
-                            <span data-text="Toan">Toan</span>
-                        </a>
-                    </li>
-                    <li className='navigation-item'>
-                        <a href="" className='navigation-link navigation-link-3'>
-                            <span data-text="Toan">Toan</span>
-                        </a>
-                    </li>
-                    <li className='navigation-item'>
-                        <a href="" className='navigation-link navigation-link-4'>
-                            <span data-text="Toan">Toan</span>
-                        </a>
-                    </li>
-                    <li className='navigation-item'>
-                        <a href="" className='navigation-link navigation-link-5'>
-                            <span data-text="Toan">Toan</span>
-                        </a>
-                    </li>
-                    <li className='navigation-item'>
-                        <a href="" className='navigation-link navigation-link-6'>
-                            <span data-text="Toan">Toan</span>
-                        </a>
-                    </li>
-                </ul>
+                <div>
+                    {showItems()}
+                </div>
             </div>
         </Container>
     );

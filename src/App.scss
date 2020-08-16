@@ -168,7 +168,7 @@ textarea:-webkit-autofill:focus{
   user-select: none;
   margin: 120px 0;
 
-  a{
+  .navigation-link{
     font-size: 100px;
     text-decoration: none;
     color: #1B2735;
@@ -178,8 +178,11 @@ textarea:-webkit-autofill:focus{
   span{
     position: relative;
     display: block;
+    overflow: hidden;
 
     &::before{
+      top: 0;
+      left: 0;
       width: 0;
       color: $color-primary;
       overflow: hidden;
@@ -224,7 +227,5 @@ textarea:-webkit-autofill:focus{
       font-size: 24px;
     }
   }
-
-
 }
 

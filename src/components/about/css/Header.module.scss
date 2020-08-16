@@ -65,4 +65,8 @@
     background: rgba(#000000, 0.4);
     width: 1px;
     height: calc(85%);
+
+    @media only screen and (hover: none) and (pointer: coarse){
+      display: none;
+    }
   }

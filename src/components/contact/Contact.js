@@ -63,8 +63,10 @@ const Contact = () => {
                 <Row>
                     <Heading text='Contact' />
                 </Row>
-                <span className={style.Email}>joker7nbt@gmail.com</span>
-                <span className={style.Intro}>Let's do something together!</span>
+                <Reveal>
+                    <span className={style.Email}>joker7nbt@gmail.com</span>
+                    <span className={style.Intro}>Let's do something together!</span>
+                </Reveal>
                 <Row className={style.Form}>
                     <Col md={5}>
                         <Reveal onReveal={() => show()}>
