@@ -1,5 +1,20 @@
 @import '../../util/css/variables.scss';
+@import '../../util/css/mixins/transition';
 
 .Works{
     padding-top: 5rem;
+
+    .ItemPreview{
+        position: fixed;
+        top: 12%;
+        left: 50%;
+        width: 0;
+        height: 400px;
+        background: url(../../../resources/images/works/image_not_availble.png) no-repeat 50% 50%;
+        background-size: 100% 100%;
+        overflow: hidden;
+        z-index: 10000;
+        max-width: 600px;
+        @include transition(0.3s all);
+    }
 }
