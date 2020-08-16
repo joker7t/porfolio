@@ -24,7 +24,7 @@ const Home = () => {
                 <Background />
 
                 <div className={classes.homeText}>
-                    Hello, I'm <span className={classes.highlight}>Toan Nguyen</span><br />
+                    Hello, I'm <span className={classes.highlight} style={{ whiteSpace: 'nowrap' }}>Toan Nguyen</span><br />
                     I'm a full-stack developer.
                     <div style={{ height: '20px' }}></div>
                     <span className={classes.homeTextInfo} onClick={() => scrollToElement('about')}>
