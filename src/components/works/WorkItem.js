@@ -28,12 +28,10 @@ const WorkItem = ({ workItem }) => {
     const { name } = workItem;
 
     return (
-        <div>
-            <div className='project-preview-wrapper'>
-                <div className='project-preview' ref={projectPreviewRef}></div>
-            </div>
-            <div className='navigation-item' ref={itemRef}>
-                <div className='navigation-link'>
+        <div className={style.WorkItem}>
+            <div className={style.ItemPreview} ref={projectPreviewRef}></div>
+            <div className={style.Item} ref={itemRef}>
+                <div className={style.Name}>
                     <span data-text={name}>{name}</span>
                 </div>
             </div>
