@@ -37,7 +37,7 @@ export default [
         pictures: [Manc1, Manc2, Manc3, Manc4, Manc5]
     },
     {
-        name: 'the waves',
+        name: 'waves',
         url: "https://waves-joker7nbt.herokuapp.com/",
         mainPic: Waves1,
         pictures: [Waves1, Waves2, Waves3, Waves4, Waves5, Waves6, Waves7]
