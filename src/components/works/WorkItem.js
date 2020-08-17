@@ -27,10 +27,13 @@ const WorkItem = ({ workItem }) => {
         timeline.fromTo(
             nameRef.current,
             {
-                y: -50
+                y: 50,
+                scale: 0.8,
+                transformOrigin: "left center"
             },
             {
-                y: 50,
+                y: -20,
+                scale: 1,
                 ease: "none"
             }
         )
