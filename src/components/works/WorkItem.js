@@ -1,29 +1,39 @@
 import React, { useEffect, useRef } from 'react';
-import { TimelineMax, Expo } from 'gsap';
+import { TimelineMax } from 'gsap';
 import style from './css/WorkItem.module.scss';
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
-const WorkItem = ({ workItem, alignRight }) => {
+if (typeof window !== `undefined`) {
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.core.globals("ScrollTrigger", ScrollTrigger)
+}
+
+const WorkItem = ({ workItem }) => {
     const itemRef = useRef(null);
     const nameRef = useRef(null);
     const pictureRef = useRef(null);
 
     useEffect(() => {
-        //     const timeline = new TimelineMax();
-        //     itemRef.current.onmouseenter = () => {
-        //         timeline.to(
-        //             pictureRef.current,
-        //             1,
-        //             { height: 500, ease: Expo.easeInOut }
-        //         );
         pictureRef.current.style.backgroundImage = `url('${workItem.mainPic}')`;
-        //     };
-        //     itemRef.current.onmouseout = () => {
-        //         timeline.to(
-        //             pictureRef.current,
-        //             0.6,
-        //             { height: 0, ease: Expo.easeInOut }
-        //         );
-        //     };
+        const timeline = new TimelineMax({
+            scrollTrigger: {
+                trigger: nameRef.current,
+                scrub: true,
+                start: "top bottom",
+                end: "+=100%"
+            }
+        });
+        timeline.fromTo(
+            nameRef.current,
+            {
+                y: -50
+            },
+            {
+                y: 50,
+                ease: "none"
+            }
+        )
         //eslint-disable-next-line
     }, []);
 
@@ -31,13 +41,10 @@ const WorkItem = ({ workItem, alignRight }) => {
 
     return (
         <div className={style.WorkItem} ref={itemRef}>
-
-            <div className={style.Item} ref={nameRef}>
-                <div className={style.Name}>
-                    <span data-text={name}>{name}</span>
-                </div>
-                <div className={style.Picture} ref={pictureRef}></div>
+            <div className={style.Name} ref={nameRef}>
+                <span data-text={name}>{name}</span>
             </div>
+            <div className={style.Picture} ref={pictureRef}></div>
         </div>
     );
 }

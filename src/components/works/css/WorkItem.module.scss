@@ -3,7 +3,6 @@
 
 .WorkItem{
 
-    .Item{
         margin-bottom: 4rem;
 
         .Name{
@@ -11,6 +10,8 @@
             text-decoration: none;
             color: #1B2735;
             font-family: 'Cosi Azure';
+            mix-blend-mode: difference;
+            z-index: 5;
             span{
                 position: relative;
                 overflow: hidden;
@@ -52,6 +53,8 @@
             overflow: hidden;
             z-index: 10000;
             height: 500px;
+            padding: 0;
+            margin: 0;
 
             @include respond('desktop'){
                 height: 450px;
@@ -70,6 +73,5 @@
         &:hover .Name span::before{
             width: 100%;
         }
-    }
     
 }

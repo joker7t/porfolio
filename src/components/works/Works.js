@@ -8,7 +8,7 @@ import WorkItem from './WorkItem';
 const Works = () => {
 
     const showItems = () => workData.map((item, i) =>
-        <WorkItem key={i} workItem={item} alignRight={i % 2 ? false : true} />
+        <WorkItem key={i} workItem={item} />
     )
 
     return (

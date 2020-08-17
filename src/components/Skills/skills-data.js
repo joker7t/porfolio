@@ -32,7 +32,19 @@ export default [
         "count": "70"
     },
     {
-        "tag": "Docker",
+        "tag": "bootstrap",
+        "count": "70"
+    },
+    {
+        "tag": "material-ui",
+        "count": "70"
+    },
+    {
+        "tag": "docker",
+        "count": "50"
+    },
+    {
+        "tag": "firebase",
         "count": "50"
     },
     {
