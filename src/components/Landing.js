@@ -80,7 +80,7 @@ const Landing = () => {
             </Element>
             <Footer />
 
-            <div className={`cursor ${isActive ? 'active' : ''}`} ref={cursorRef}></div>
+            <div className={`cursor click ${isActive ? 'active' : ''}`} ref={cursorRef}></div>
             <div id='wrapper'>
                 <div className='porfolio-item'>
                     <div className='porfolio-thumb'>
