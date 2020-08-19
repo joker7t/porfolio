@@ -15,10 +15,11 @@ const WorkPopup = ({ popupData, setPopupData }) => {
     }
 
     const { data, isActive } = popupData;
+
     return (
-        <div className={`popup ${isActive ? 'active' : ''}`} onClick={handleClose}>
-            <div className={`popup__content ${isActive ? 'active' : ''}`} onClick={handleClickContent}>
-                <div className="popup__close" onClick={handleClose}>
+        <div className={`${style.Popup} ${isActive ? style.Active : ''}`} onClick={handleClose}>
+            <div className={`${style.PopupContent} ${isActive ? style.Active : ''}`} onClick={handleClickContent}>
+                <div className={style.PopupClose} onClick={handleClose}>
                     &times;
                 </div>
             </div>
