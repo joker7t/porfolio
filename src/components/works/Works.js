@@ -4,6 +4,7 @@ import { Container, Row } from "react-bootstrap";
 import style from './css/Works.module.scss';
 import workData from './WorkData';
 import WorkItem from './WorkItem';
+import WorkPopup from './WorkPopup';
 
 const Works = () => {
 
@@ -12,16 +13,20 @@ const Works = () => {
     )
 
     return (
-        <Container className={style.Works}>
-            <Row>
-                <Heading text='Works' />
-            </Row>
-            <div className={style.WorkItemContainer}>
-                <div>
-                    {showItems()}
+        <div>
+            <Container className={style.Works}>
+                <Row>
+                    <Heading text='Works' />
+                </Row>
+                <div className={style.WorkItemContainer}>
+                    <div>
+                        {showItems()}
+                    </div>
                 </div>
-            </div>
-        </Container>
+            </Container>
+            <a href="#popup" className="btn btn--white">Book now!</a>
+            <WorkPopup />
+        </div>
     );
 }
 
