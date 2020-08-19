@@ -13,12 +13,12 @@ const Works = () => {
     });
 
     const showItems = () => workData.map((item, i) =>
-        <WorkItem key={i} workItem={item} />
+        <WorkItem key={i} workItem={item} showPopup={(data) => handleClick(data)} />
     )
 
-    const handleClick = () => {
+    const handleClick = (data) => {
         setPopupData({
-            ...popupData,
+            data: data,
             isActive: true
         })
     }
@@ -35,7 +35,6 @@ const Works = () => {
                     </div>
                 </div>
             </Container>
-            <div className="btn btn--white" onClick={handleClick}>Book now!</div>
             <WorkPopup popupData={popupData} setPopupData={setPopupData} />
         </div>
     );

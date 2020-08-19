@@ -9,7 +9,7 @@ if (typeof window !== `undefined`) {
     gsap.core.globals("ScrollTrigger", ScrollTrigger)
 }
 
-const WorkItem = ({ workItem }) => {
+const WorkItem = ({ workItem, showPopup }) => {
     const itemRef = useRef(null);
     const nameRef = useRef(null);
     const pictureRef = useRef(null);
@@ -47,7 +47,7 @@ const WorkItem = ({ workItem }) => {
             <div className={style.Name} ref={nameRef}>
                 <span data-text={name}>{name}</span>
             </div>
-            <div className={style.Picture} ref={pictureRef}></div>
+            <div className={style.Picture} ref={pictureRef} onClick={() => showPopup(workItem)}></div>
         </div>
     );
 }
