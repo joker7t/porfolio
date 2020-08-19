@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Heading from '../util/Heading';
 import { Container, Row } from "react-bootstrap";
 import style from './css/Works.module.scss';
@@ -7,10 +7,21 @@ import WorkItem from './WorkItem';
 import WorkPopup from './WorkPopup';
 
 const Works = () => {
+    const [popupData, setPopupData] = useState({
+        data: {},
+        isActive: false
+    });
 
     const showItems = () => workData.map((item, i) =>
         <WorkItem key={i} workItem={item} />
     )
+
+    const handleClick = () => {
+        setPopupData({
+            ...popupData,
+            isActive: true
+        })
+    }
 
     return (
         <div>
@@ -24,8 +35,8 @@ const Works = () => {
                     </div>
                 </div>
             </Container>
-            <a href="#popup" className="btn btn--white">Book now!</a>
-            <WorkPopup />
+            <div className="btn btn--white" onClick={handleClick}>Book now!</div>
+            <WorkPopup popupData={popupData} setPopupData={setPopupData} />
         </div>
     );
 }

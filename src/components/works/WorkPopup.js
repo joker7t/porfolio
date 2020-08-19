@@ -1,12 +1,26 @@
 import React from 'react';
 import style from './css/WorkPopup.module.scss';
 
-const WorkPopup = () => {
+const WorkPopup = ({ popupData, setPopupData }) => {
+
+    const handleClose = () => {
+        setPopupData({
+            ...popupData,
+            isActive: false
+        })
+    }
+
+    const handleClickContent = (e) => {
+        e.stopPropagation();
+    }
+
+    const { data, isActive } = popupData;
     return (
-        <div className="popup" id="popup">
-            <div className="popup__content">
-                <a href="#section-tours" className="popup__close">&times;</a>
-                abc
+        <div className={`popup ${isActive ? 'active' : ''}`} onClick={handleClose}>
+            <div className={`popup__content ${isActive ? 'active' : ''}`} onClick={handleClickContent}>
+                <div className="popup__close" onClick={handleClose}>
+                    &times;
+                </div>
             </div>
         </div>
     );
