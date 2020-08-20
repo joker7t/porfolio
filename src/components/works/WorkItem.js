@@ -28,12 +28,10 @@ const WorkItem = ({ workItem, showPopup }) => {
             nameRef.current,
             {
                 y: 50,
-                scale: 0.8,
                 transformOrigin: "left center"
             },
             {
                 y: -20,
-                scale: 1,
                 ease: "none"
             }
         )
