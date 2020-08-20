@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './css/WorkPopup.module.scss';
+import { Carousel } from 'react-bootstrap';
 
 const WorkPopup = ({ popupData, setPopupData }) => {
 
+    const [index, setIndex] = useState(0);
+    const { data, isActive } = popupData;
+
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
+
+
     const handleClose = () => {
         setPopupData({
-            ...popupData,
+            data: data,
             isActive: false
         })
+        setIndex(0);
     }
 
     const handleClickContent = (e) => {
         e.stopPropagation();
     }
 
-    const { data, isActive } = popupData;
+    const showData = () => data && data.pictures && data.pictures.map((picture, i) =>
+        <Carousel.Item key={i} className={style.Item}>
+            <img
+                className={`d-block w-100 h-100 ${style.Picture}`}
+                src={picture}
+                alt={`${data.name} ${i}`}
+            />
+        </Carousel.Item>
+    )
 
     return (
         <div className={`${style.Popup} ${isActive ? style.Active : ''}`} onClick={handleClose}>
@@ -22,6 +40,17 @@ const WorkPopup = ({ popupData, setPopupData }) => {
                 <div className={style.PopupClose} onClick={handleClose}>
                     &times;
                 </div>
+                <Carousel
+                    keyboard={true}
+                    activeIndex={index}
+                    onSelect={handleSelect}
+                    controls={false}
+                    indicators={false}
+                    interval={5000}
+                    pause={false}
+                >
+                    {showData()}
+                </Carousel>
             </div>
         </div>
     );
