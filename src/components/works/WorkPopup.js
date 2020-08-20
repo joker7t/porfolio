@@ -51,6 +51,10 @@ const WorkPopup = ({ popupData, setPopupData }) => {
                 >
                     {showData()}
                 </Carousel>
+                <div className={style.Text}>
+                    <div>{data.intro}</div>
+                    <a href={data.url} target='_blank' rel="noopener noreferrer">view website</a>
+                </div>
             </div>
         </div>
     );

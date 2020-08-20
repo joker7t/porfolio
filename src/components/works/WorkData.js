@@ -34,42 +34,49 @@ export default [
         name: 'man city',
         url: "https://mcfc-joker7nbt.netlify.app/",
         mainPic: Manc1,
-        pictures: [Manc1, Manc2, Manc3, Manc4, Manc5]
+        pictures: [Manc1, Manc2, Manc3, Manc4, Manc5],
+        intro: 'aaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaa'
     },
     {
         name: 'waves',
         url: "https://waves-joker7nbt.herokuapp.com/",
         mainPic: Waves1,
-        pictures: [Waves1, Waves2, Waves3, Waves4, Waves5, Waves6, Waves7]
+        pictures: [Waves1, Waves2, Waves3, Waves4, Waves5, Waves6, Waves7],
+        intro: 'aaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaa'
     },
     {
         name: 'the venue',
         url: "https://thevenue-joker7nbt.netlify.app/",
         mainPic: Venue1,
-        pictures: [Venue1, Venue2, Venue3]
+        pictures: [Venue1, Venue2, Venue3],
+        intro: 'aaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaa'
     },
     {
         name: 'natours',
         url: "https://natours-joker7nbt.netlify.app/",
         mainPic: Natours1,
-        pictures: [Natours1, Natours2, Natours3, Natours4, Natours5]
+        pictures: [Natours1, Natours2, Natours3, Natours4, Natours5],
+        intro: 'aaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaa'
     },
     {
         name: 'trillo',
         url: "https://trillo-joker7nbt.netlify.app/",
         mainPic: Trillo1,
-        pictures: [Trillo1]
+        pictures: [Trillo1],
+        intro: 'aaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaa'
     },
     {
         name: 'slack chat',
         url: "https://slackchat-joker7nbt.netlify.app/",
         mainPic: Slack1,
-        pictures: [Slack1, Slack2, Slack3]
+        pictures: [Slack1, Slack2, Slack3],
+        intro: 'aaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaa'
     },
     {
         name: 'shopping',
         url: "https://shoppingwebsite-template-joker7nbt.netlify.app/",
         mainPic: Shopping1,
-        pictures: [Shopping1, Shopping2, Shopping3, Shopping4, Shopping5, Shopping6]
+        pictures: [Shopping1, Shopping2, Shopping3, Shopping4, Shopping5, Shopping6],
+        intro: 'aaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaa'
     }
 ];
