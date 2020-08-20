@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import classes from './css/Home.module.scss';
 import Hello from './svg/Hello.js';
 import { scroller } from "react-scroll";
 import Background from './Background';
+import hoverMoveAnimate from '../util/hoverMoveAnimate';
 
 const scrollToElement = (element) => {
     scroller.scrollTo(element, {
@@ -13,7 +14,15 @@ const scrollToElement = (element) => {
 };
 
 const Home = () => {
+    const textTef = useRef(null);
+
     useEffect(() => {
+        textTef.current.onmousemove = (e) => {
+            hoverMoveAnimate(e, textTef.current);
+        }
+        textTef.current.onmouseleave = (e) => {
+            hoverMoveAnimate(e, textTef.current);
+        }
 
         //eslint-disable-next-line
     }, []);
@@ -24,8 +33,10 @@ const Home = () => {
                 <Background />
 
                 <div className={classes.homeText}>
-                    Hello, I'm <span className={classes.highlight} style={{ whiteSpace: 'nowrap' }}>Toan Nguyen</span><br />
-                    I'm a full-stack developer.
+                    <div ref={textTef}>
+                        Hello, I'm <span className={classes.highlight} style={{ whiteSpace: 'nowrap' }}>Toan Nguyen</span><br />
+                        I'm a full-stack developer.
+                    </div>
                     <div style={{ height: '20px' }}></div>
                     <span className={classes.homeTextInfo} onClick={() => scrollToElement('about')}>
                         Know more about me <i className={`fa fa-arrow-right ${classes.homeTextInfoArrow}`} aria-hidden="true"></i>

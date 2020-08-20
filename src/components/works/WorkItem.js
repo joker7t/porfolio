@@ -3,6 +3,7 @@ import { TimelineMax } from 'gsap';
 import style from './css/WorkItem.module.scss';
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import hoverMoveAnimate from '../util/hoverMoveAnimate';
 
 if (typeof window !== `undefined`) {
     gsap.registerPlugin(ScrollTrigger)
@@ -16,6 +17,13 @@ const WorkItem = ({ workItem, showPopup }) => {
 
     useEffect(() => {
         pictureRef.current.style.backgroundImage = `url('${workItem.mainPic}')`;
+        pictureRef.current.onmousemove = (e) => {
+            hoverMoveAnimate(e, pictureRef.current, 'skew(-3deg,-3deg)');
+        }
+        pictureRef.current.onmouseleave = (e) => {
+            hoverMoveAnimate(e, pictureRef.current);
+        }
+
         const timeline = new TimelineMax({
             scrollTrigger: {
                 trigger: nameRef.current,

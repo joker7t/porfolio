@@ -12,10 +12,12 @@
             font-family: 'Cosi Azure';
             font-weight: 900;
             z-index: 5;
+            position: relative;
             span{
                 position: relative;
                 overflow: hidden;
                 display: block;
+                z-index: 5;
         
                 &::before{
                     top: 0;
@@ -51,10 +53,13 @@
             background: url(../../../resources/images/works/image_not_availble.png) no-repeat 50% 50%;
             background-size: 100% 100%;
             overflow: hidden;
-            z-index: 10000;
             height: 500px;
             padding: 0;
             margin: 0;
+            transform: skew(-3deg, -3deg);
+            box-shadow: 0 2rem 4rem rgba(#000, .2);
+            position: relative;
+            z-index: 1;
 
             @include respond('desktop'){
                 height: 450px;
