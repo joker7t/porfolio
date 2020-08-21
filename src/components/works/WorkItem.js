@@ -18,7 +18,7 @@ const WorkItem = ({ workItem, showPopup }) => {
     useEffect(() => {
         pictureRef.current.style.backgroundImage = `url('${workItem.mainPic}')`;
         pictureRef.current.onmousemove = (e) => {
-            hoverMoveAnimate(e, pictureRef.current, 'skew(-3deg,-3deg)');
+            hoverMoveAnimate(e, pictureRef.current);
         }
         pictureRef.current.onmouseleave = (e) => {
             hoverMoveAnimate(e, pictureRef.current);
